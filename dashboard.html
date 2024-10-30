@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Dashboard Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -11,328 +11,263 @@
 </head>
 
 <body class="bg-zinc-900 text-white font-sans">
-    <div class="min-h-screen flex">
+    <div class="min-h-screen flex flex-col lg:flex-row">
         <!-- Sidebar -->
-        <div class="w-64 h-full flex flex-col justify-start items-start gap-8 p-4">
-            <div
-                class="w-full h-32 px-4 py-6 bg-gray-900 rounded-3xl flex flex-col justify-start items-center gap-2 inline-flex">
-                <img class="w-28 h-12" src="public/logo-gis.png" alt="Logo GIS" />
-                <div class="w-full text-center text-white text-sm font-medium leading-8">Junior High School</div>
-            </div>
-            <div class="w-full h-full p-6 bg-gray-900 rounded-3xl flex flex-col justify-start items-start gap-2">
-                <a href="dashboard.html"
-                    class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                    <div class="flex-1 text-white text-base font-normal leading-6">Dashboard</div>
-                    <div class="w-6 h-6 relative">
-                        <img class="w-6 h-6" src="public/icons/Home-Smile.svg" />
-                    </div>
+        <aside class="w-full lg:w-64 h-auto lg:h-full flex-shrink-0 flex flex-col gap-8 p-4">
+            <section class="w-full h-32 px-4 py-6 bg-gray-900 rounded-3xl flex flex-col items-center gap-2">
+                <img class="w-28 h-12" src="public/logo-gis.png" alt="Logo GIS">
+                <p class="text-center text-white text-sm font-medium leading-8">Junior High School</p>
+            </section>
+            <nav class="w-full h-full p-6 bg-gray-900 rounded-3xl flex flex-col gap-2">
+                <a href="dashboard.html" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-white text-base font-normal leading-6 hover:text-gray-900">Dashboard</span>
+                    <img class="w-6 h-6" src="public/icons/Home-Smile.svg" alt="Home Icon">
                 </a>
-                <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                    <div class="flex-1 text-gray-300 text-base font-normal leading-6">Learning Data</div>
-                    <div class="w-6 h-6 relative">
-                        <img class="w-6 h-6" src="public/icons/notebook-minimalistic.svg" />
-                    </div>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Learning Data</span>
+                    <img class="w-6 h-6" src="public/icons/notebook-minimalistic.svg" alt="Notebook Icon">
                 </a>
-                <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700"">
-                    <div class=" flex-1 text-gray-300 text-base font-normal leading-6">My Class
-            </div>
-            <div class="w-6 h-6 relative">
-                <img class="w-6 h-6" src="public/icons/Folder-With-Files.svg" />
-            </div>
-            </a>
-            <hr class="w-full my-4 border-t border-gray-700">
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6">Leger</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/File-Text.svg" />
-                </div>
-            </a>
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6 whitespace-nowrap">Semester Report</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/File-Text.svg" />
-                </div>
-            </a>
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6">P5 Report</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/File-Text.svg" />
-                </div>
-            </a>
-            <hr class="w-full my-4 border-t border-gray-700">
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6">Bill</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/Bill.svg" />
-                </div>
-            </a>
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6">Transaksi</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/Wallet.svg" />
-                </div>
-            </a>
-            <a href="" class="w-full p-2 rounded-lg flex justify-start items-center gap-2 hover:bg-gray-700">
-                <div class="flex-1 text-gray-300 text-base font-normal leading-6">Payment History</div>
-                <div class="w-6 h-6 relative">
-                    <img class="w-6 h-6" src="public/icons/Bill.svg" />
-                </div>
-            </a>
-        </div>
-    </div>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">My Class</span>
+                    <img class="w-6 h-6" src="public/icons/Folder-With-Files.svg" alt="Folder Icon">
+                </a>
+                <hr class="w-full my-4 border-t border-gray-700">
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Leger</span>
+                    <img class="w-6 h-6" src="public/icons/File-Text.svg" alt="File Text Icon">
+                </a>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Semester Report</span>
+                    <img class="w-6 h-6" src="public/icons/File-Text.svg" alt="File Text Icon">
+                </a>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">P5 Report</span>
+                    <img class="w-6 h-6" src="public/icons/File-Text.svg" alt="File Text Icon">
+                </a>
+                <hr class="w-full my-4 border-t border-gray-700">
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Bill</span>
+                    <img class="w-6 h-6" src="public/icons/Bill.svg" alt="Bill Icon">
+                </a>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Transaksi</span>
+                    <img class="w-6 h-6" src="public/icons/Wallet.svg" alt="Wallet Icon">
+                </a>
+                <a href="#" class="w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                    <span class="text-gray-300 text-base font-normal leading-6">Payment History</span>
+                    <img class="w-6 h-6" src="public/icons/Bill.svg" alt="Bill Icon">
+                </a>
+            </nav>
+        </aside>
 
-    <!-- Main Content -->
-    <div class="flex-1 p-6">
-        <!-- Header Section -->
-        <!-- <div class="flex justify-between items-center mb-6">
-            <h1 class="text-xl font-semibold">Tahun Ajaran 2023-2024 Term 2 Semester 1</h1>
-            <div class="flex items-center space-x-4">
-                <img src="https://via.placeholder.com/40" alt="User Image" class="w-10 h-10 rounded-full">
-                <div>
-                    <h2 class="text-sm font-semibold">User Name</h2>
-                    <p class="text-xs text-gray-400">User Role</p>
-                </div>
-            </div>
-        </div> -->
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <!-- Overview Cards -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <article class="w-full px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-900 text-sm font-normal leading-snug">School Year</p>
+                        <p class="text-gray-900 text-xs font-normal">2024/2025</p>
+                    </div>
+                    <img class="w-7 h-7" src="public/icons/dark/academic-year.svg" alt="Academic Year Icon">
+                </article>
+                <article class="w-full px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-900 text-sm font-normal leading-snug">Term</p>
+                        <p class="text-gray-900 text-xs font-normal">2/4</p>
+                    </div>
+                    <img class="w-7 h-7" src="public/icons/dark/term-Icon.svg" alt="Term Icon">
+                </article>
+                <article class="w-full px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-900 text-sm font-normal leading-snug">Semester</p>
+                        <p class="text-gray-900 text-xs font-normal">1/2</p>
+                    </div>
+                    <img class="w-7 h-7" src="public/icons/dark/semester.svg" alt="Semester Icon">
+                </article>
+                <article class="w-full px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-900 text-sm font-normal leading-snug">Subject</p>
+                        <p class="text-gray-900 text-xs font-normal">12</p>
+                    </div>
+                    <img class="w-7 h-7" src="public/icons/dark/subject.svg" alt="Subject Icon">
+                </article>
+            </section>
 
-        <!-- Overview Cards -->
-        <div class="grid grid-cols-4 gap-4 mb-6">
-            <!-- School Year -->
-            <div class="w-36 h-20 px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
-                <div class="w-24 flex flex-col justify-start items-start gap-2">
-                    <div class="text-gray-900 text-sm font-normal leading-snug">School Year</div>
-                    <div class="text-gray-900 text-xs font-normal leading-none">2024/2025</div>
-                </div>
-                <div class="relative w-7 h-7">
-                    <img src="public/icons/dark/academic-year.svg" alt="">
-                </div>
-            </div>
-            <!-- Term -->
-            <div class="w-36 h-20 px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-1">
-                <div class="w-24 flex flex-col justify-start items-start gap-2">
-                    <div class="text-gray-900 text-sm font-normal leading-snug">Term</div>
-                    <div class="text-gray-900 text-xs font-normal leading-none">2/4</div>
-                </div>
-                <div class="relative w-7 h-7">
-                    <img src="public/icons/dark/term-Icon.svg" alt="">
-                </div>
-            </div>  
-            <!-- Semester -->
-            <div class="w-36 h-20 px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
-                <div class="w-24 flex flex-col justify-start items-start gap-2">
-                    <div class="text-gray-900 text-sm font-normal leading-snug">Semester</div>
-                    <div class="text-gray-900 text-xs font-normal leading-none">1/2</div>
-                </div>
-                <div class="relative w-7 h-7">
-                    <img src="public/icons/dark/semester.svg" alt="">
-                </div>
-            </div>
-            <!-- Subject -->
-            <div class="w-36 h-20 px-3 py-4 bg-lime-400 rounded-2xl flex justify-between items-start gap-1">
-                <div class="w-24 flex flex-col justify-start items-start gap-2">
-                    <div class="text-gray-900 text-sm font-normal leading-snug">Subject</div>
-                    <div class="text-gray-900 text-xs font-normal leading-none">12</div>
-                </div>
-                <div class="relative w-7 h-7">
-                    <img src="public/icons/dark/subject.svg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <!-- Content Area -->
-        <div class="grid grid-cols-3 gap-6">
             <!-- Financial and Performance Charts -->
-            <div class="col-span-4 flex space-x-4">
-                <div class="h-40 p-6 bg-gray-900 rounded-3xl justify-start items-start gap-6 inline-flex">
-                    <div class="w-24 h-24 relative">
-                        <!-- Progress bar bulat -->
-                        <svg class="w-24 h-24" viewBox="0 0 36 36">
-                            <path class="text-gray-300" fill="none" stroke-width="3" stroke="currentColor" 
-                                  d="M18 1.5 A16.5 16.5 0 1 1 18 34.5 A16.5 16.5 0 1 1 18 1.5" />
-                            <path class="text-lime-400" fill="none" stroke-width="3" stroke="currentColor" 
-                                  stroke-dasharray="85, 100" 
-                                  d="M18 1.5 A16.5 16.5 0 1 1 18 34.5 A16.5 16.5 0 1 1 18 1.5" />
-                        </svg>
-                    </div>
-                    <div class="w-48 flex-col justify-start items-start gap-2 inline-flex">
-                      <div class="self-stretch h-20 flex-col justify-start items-start gap-2 flex">
-                        <div class="self-stretch justify-between items-center inline-flex">
-                          <div class="text-green-50/95 text-base font-medium leading-relaxed">Arrears  SPP</div>
-                          <div class="w-0.5 flex-col justify-start items-start gap-px inline-flex">
-                            <div class="self-stretch h-0.5 bg-zinc-100 rounded-full"></div>
-                            <div class="self-stretch h-0.5 bg-zinc-100 rounded-full"></div>
-                            <div class="self-stretch h-0.5 bg-zinc-100 rounded-full"></div>
-                          </div>
-                        </div>
-                        <div class="self-stretch text-green-50/95 text-xs font-normal leading-tight">January Month</div>
-                        <div class="self-stretch text-green-50/95 text-xs font-normal leading-tight">Rp 1.400.000</div>
-                      </div>
-                      <div class="w-32 p-0.5 bg-lime-400 rounded justify-center items-center gap-2 inline-flex">
-                        <div class="grow shrink basis-0 text-center text-gray-900 text-xs font-medium leading-none">view all bills</div>
-                      </div>
+            <section class="flex flex-col lg:flex-row gap-4">
+                <div class="h-40 p-6 bg-gray-900 rounded-3xl flex gap-6">
+                    <svg class="w-24 h-24" viewBox="0 0 36 36">
+                        <path class="text-gray-300" fill="none" stroke-width="3" stroke="currentColor" 
+                              d="M18 1.5 A16.5 16.5 0 1 1 18 34.5 A16.5 16.5 0 1 1 18 1.5" />
+                        <path class="text-lime-400" fill="none" stroke-width="3" stroke="currentColor" 
+                              stroke-dasharray="85, 100" 
+                              d="M18 1.5 A16.5 16.5 0 1 1 18 34.5 A16.5 16.5 0 1 1 18 1.5" />
+                    </svg>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-green-50/95 text-base font-medium leading-relaxed">Arrears SPP</p>
+                        <p class="text-green-50/95 text-xs font-normal leading-tight">January Month</p>
+                        <p class="text-green-50/95 text-xs font-normal leading-tight">Rp 1.400.000</p>
+                        <button class="w-32 p-0.5 bg-lime-400 rounded text-gray-900 text-xs font-medium leading-none">
+                            view all bills
+                        </button>
                     </div>
                 </div>
-                <div class="w-full h-40 relative bg-gray-900 rounded-3xl">
-                    <div class="w-80 h-5 left-[30px] top-[122px] absolute justify-between items-center inline-flex">
-                      <!-- Ganti dengan chart area menggunakan ApexCharts -->
-                      <div id="termChart" class="w-full h-full"></div>
-                    </div>
-                    <div class="left-[20px] top-[23px] absolute flex-col justify-between items-start inline-flex">
-                      <!-- Ganti dengan chart area menggunakan ApexCharts -->
-                      <div id="scoreChart" class="w-full h-full"></div>
-                    </div>
-                    <div class="w-28 h-20 left-[51px] top-[31px] absolute">
-                    </div>
+                <div class="w-full h-40 bg-gray-900 rounded-3xl">
+                    <div id="termChart" class="w-full h-full"></div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Lesson Timetable -->
-        <div class="mt-6 bg-gray-700 p-6 rounded-lg">
-            <h3 class="font-semibold text-lg mb-4">Lesson Timetable</h3>
-            <table class="w-full text-sm">
-                <thead>
-                    <tr class="text-gray-400">
-                        <th class="py-2">Time</th>
-                        <th class="py-2">Monday</th>
-                        <th class="py-2">Tuesday</th>
-                        <th class="py-2">Wednesday</th>
-                        <th class="py-2">Thursday</th>
-                        <th class="py-2">Friday</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Repeat rows -->
-                    <tr class="border-b border-gray-600">
-                        <td class="py-2">07:30</td>
-                        <td class="py-2">Informatics</td>
-                        <td class="py-2">Music</td>
-                        <td class="py-2">Mathematics</td>
-                        <td class="py-2">Religion</td>
-                        <td class="py-2">PE</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+            </section>
 
-    <!-- User Profile and Calendar -->
-    <div class="flex flex-col p-6 space-y-4">
-        <!-- User Profile Section -->
-        <div class="bg-gray-900 p-6 rounded-2xl flex flex-col items-center">
-            <!-- <div class="w-64 h-72 p-6 rounded-2xl flex flex-col justify-start items-center gap-4"> -->
-                <!-- <div class="w-12 h-12 p-2 bg-lime-400 rounded-full flex justify-center items-center">
-                    <div class="relative w-6 h-6">
-                        <div class="absolute w-5 h-5 border border-gray-900"></div>
-                        <div class="absolute w-3 h-1 border border-gray-900 left-2 top-4"></div>
-                    </div>
-                    <div class="w-4 h-4 bg-gray-900 rounded-full flex justify-center items-center">
-                        <div class="text-white text-xs">2</div>
-                    </div>
-                </div> -->
-                <div class="flex flex-col items-center">
-                    <div class="relative w-24 h-24">
-                        <div class="absolute w-28 h-28 bg-lime-400 rounded-full -top-2 -left-2 flex justify-center items-center">
-                            <img class="w-24 h-24 rounded-full" src="assets/img/user.png" />
-                        </div>
-                        
-                    </div>
-                    <div class="text-center text-white py-4">
-                        <div class="text-sm">John Doe</div>
-                        <div class="text-xs">9B</div>
+            <!-- Lesson Timetable -->
+            <section class="mt-6 bg-gray-900 p-6 rounded-2xl">
+                <h3 class="font-semibold text-lg mb-4">Lesson Timetable</h3>
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-gray-400">
+                            <th class="py-2">Time</th>
+                            <th class="py-2">Monday</th>
+                            <th class="py-2">Tuesday</th>
+                            <th class="py-2">Wednesday</th>
+                            <th class="py-2">Thursday</th>
+                            <th class="py-2">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-600">
+                            <td class="py-2 text-center">07:30</td>
+                            <td class="py-2 text-center">Informatics</td>
+                            <td class="py-2 text-center">Music</td>
+                            <td class="py-2 text-center">Mathematics</td>
+                            <td class="py-2 text-center">Religion</td>
+                            <td class="py-2 text-center">PE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- User Profile, Calendar, and Latest Information -->
+        <aside class="flex flex-col p-6 space-y-4">
+            <!-- User Profile Section -->
+            <section class="bg-gray-900 p-6 rounded-2xl flex flex-col items-center">
+                <div class="relative w-24 h-24">
+                    <div class="absolute w-28 h-28 bg-lime-400 rounded-full -top-2 -left-2 flex justify-center items-center">
+                        <img class="w-24 h-24 rounded-full" src="assets/img/user.png" alt="User Profile">
                     </div>
                 </div>
+                <p class="text-center text-white py-4">
+                    <span class="text-sm">John Doe</span>
+                    <br>
+                    <span class="text-xs">9B</span>
+                </p>
                 <hr class="w-full my-3 border-3 border-green-50">
                 <div class="flex space-x-4">
-                    <div class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                        <div class="relative w-6 h-6">
-                            <img src="public/icons/dark/user-profile-icon.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                        <div class="relative w-6 h-6">
-                            <img src="public/icons/dark/group-icon.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                        <div class="relative w-6 h-6">
-                            <img src="public/icons/dark/term-Icon.svg" alt="">
-                        </div>
+                    <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
+                        <img src="public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
+                    </button>
+                    <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
+                        <img src="public/icons/dark/group-icon.svg" alt="Group Icon">
+                    </button>
+                    <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
+                        <img src="public/icons/dark/term-Icon.svg" alt="Term Icon">
+                    </button>
+                </div>
+            </section>
+
+            <!-- Calendar Section -->
+            <section class="bg-gray-900 p-6 rounded-2xl">
+                <h3 class="font-semibold text-lg">Calendar</h3>
+                <div class="mt-4 text-center">
+                    <p class="text-sm text-gray-400" id="currentMonth"></p>
+                    <div class="grid grid-cols-7 gap-1 mt-2 text-xs" id="calendarGrid">
+                        <!-- Kalender akan diisi di sini -->
                     </div>
                 </div>
-            <!-- </div> -->
-        </div>
+            </section>
 
-        <!-- Calendar Section -->
-        <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="font-semibold text-lg">Calendar</h3>
-            <div class="mt-4 text-center">
-                <p class="text-sm text-gray-400">October 2024</p>
-                <div class="grid grid-cols-7 gap-1 mt-2 text-xs">
-                    <!-- Calendar days go here -->
-                    <p class="col-span-7 text-gray-400">Calendar layout here</p>
+            <!-- Latest Information Section -->
+            <section class="h-full px-6 py-8 bg-gray-900 rounded-3xl flex-col justify-start items-start gap-6 inline-flex">
+                <div class="self-stretch justify-start items-center gap-2 inline-flex">
+                    <div class="text-center text-green-50/95 text-base font-medium">Latest information</div>
                 </div>
-            </div>
-        </div>
+                <hr class="w-full my-3 border-3 border-green-50">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center">
+                        <img class="w-16 h-16" src="public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
+                    </div>
+                    <div class="flex flex-col justify-center gap-1">
+                        <div class="text-left text-green-50/95 text-sm font-normal">Pembagian Rapot</div>
+                        <div class="flex gap-1 flex-wrap">
+                            <p class="text-green-50/95 font-normal max-w-xs whitespace-wrap">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                            </p>
+                            <a href="#" class="text-sky-500 font-normal">more...</a>
+                        </div>
+                        <div class="text-green-50/95 text-xs font-normal">3 Oktober 2024</div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Latest Information Section -->
-        <div class="bg-gray-700 p-6 rounded-lg">
-            <h3 class="font-semibold text-lg">Latest Information</h3>
-            <ul class="space-y-2 mt-4">
-                <li class="text-sm text-gray-400">Pembagian Rapot</li>
-                <li class="text-sm text-gray-400">Pembagian Rapot</li>
-                <li class="text-sm text-gray-400">Pembagian Rapot</li>
-            </ul>
-        </div>
+            <!-- Education News Section -->
+            <section class="w-64 h-56 px-4 py-2 bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex"">
+                <img class="w-28 h-36" src="https://via.placeholder.com/109x152" />
+                <div class="flex-col justify-start items-start gap-2 inline-flex">
+                    <div class="h-40 flex-col justify-start items-start gap-2 flex">
+                        <div class="self-stretch text-green-50 text-sm font-medium font-['Poppins'] leading-normal">EduHybrid</div>
+                        <div class="self-stretch text-green-50 text-xs font-normal font-['Poppins'] leading-none">Enhance your learning experience with our interactive educational platform. Access a wide range of courses and resources to help you succeed in your educational journey.</div>
+                    </div>
+                    <div class="w-16 p-0.5 bg-lime-400 rounded-lg justify-center items-center gap-2 inline-flex">
+                        <div class="text-center text-gray-900 text-xs font-normal font-['Poppins'] leading-none">Learn More</div>
+                    </div>
+                </div>
+            </section>
+        </aside>
     </div>
 
     <script>
-        // Script untuk menggambar chart area menggunakan ApexCharts
         var optionsTerm = {
             chart: {
                 type: 'area',
                 height: '100%',
-                toolbar: {
-                    show: false
-                }
+                toolbar: { show: false }
             },
             series: [{
                 name: 'Performance',
                 data: [100, 75, 50, 25]
             }],
-            xaxis: {
-                categories: ['Term 1', 'Term 2', 'Term 3', 'Term 4']
-            },
-            fill: {
-                opacity: 0.5
-            }
+            xaxis: { categories: ['Term 1', 'Term 2', 'Term 3', 'Term 4'] },
+            fill: { opacity: 0.5 }
         };
 
         var termChart = new ApexCharts(document.querySelector("#termChart"), optionsTerm);
         termChart.render();
 
-        var optionsScore = {
-            chart: {
-                type: 'area',
-                height: '100%',
-                toolbar: {
-                    show: false
-                }
-            },
-            series: [{
-                name: 'Score',
-                data: [100, 80, 60, 40]
-            }],
-            xaxis: {
-                categories: ['Term 1', 'Term 2', 'Term 3', 'Term 4']
-            },
-            fill: {
-                opacity: 0.5
-            }
-        };
+        function generateCalendar(month, year) {
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+            
+            document.getElementById('currentMonth').innerText = `${monthNames[month]} ${year}`;
+            const calendarGrid = document.getElementById('calendarGrid');
+            calendarGrid.innerHTML = ''; // Kosongkan grid sebelum diisi
 
-        var scoreChart = new ApexCharts(document.querySelector("#scoreChart"), optionsScore);
-        scoreChart.render();
+            // Tambahkan hari kosong untuk hari pertama bulan ini
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('p');
+                calendarGrid.appendChild(emptyCell);
+            }
+
+            // Tambahkan hari dalam bulan
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('p');
+                dayCell.innerText = day;
+                calendarGrid.appendChild(dayCell);
+            }
+        }
+
+        // Panggil fungsi untuk bulan dan tahun saat ini
+        const now = new Date();
+        generateCalendar(now.getMonth(), now.getFullYear());
     </script>
 </body>
 
