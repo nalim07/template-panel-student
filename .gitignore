@@ -1,0 +1,9 @@
+node_modules
+output.css
+*.log
+*.txt
+*.md
+*.json
+*.csv
+*.pdf
+*.docx

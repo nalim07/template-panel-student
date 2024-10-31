@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Dashboard Layout</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="src/output.css"> -->
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
@@ -147,7 +149,7 @@
         </main>
 
         <!-- User Profile, Calendar, and Latest Information -->
-        <aside class="flex flex-col p-6 space-y-4">
+        <aside class="flex flex-col p-6 space-y-4" style="max-width: 330px;">
             <!-- User Profile Section -->
             <section class="bg-gray-900 p-6 rounded-2xl flex flex-col items-center">
                 <div class="relative w-24 h-24">
@@ -192,29 +194,29 @@
                 </div>
                 <hr class="w-full my-3 border-3 border-green-50">
                 <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center">
-                        <img class="w-16 h-16" src="public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
+                    <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center flex-shrink-0">
+                        <img class="w-16 h-16" src="public/icons/dark/user-profile-icon.svg" loading="lazy" alt="Profile Icon">
                     </div>
-                    <div class="flex flex-col justify-center gap-1">
-                        <div class="text-left text-green-50/95 text-sm font-normal">Pembagian Rapot</div>
+                    <div class="flex-1 flex flex-col justify-center gap-1">
+                        <div class="text-left text-green-50/95 text-base font-medium">Pembagian Rapot</div>
                         <div class="flex gap-1 flex-wrap">
-                            <p class="text-green-50/95 font-normal max-w-xs whitespace-wrap">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                            <p id="textContent" class="text-green-50/95 font-normal text-sm whitespace-wrap">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio accusantium in numquam hic magnam illum quasi deserunt at! Est inventore magni nobis ut excepturi ducimus vero esse accusamus facere! Minima!
                             </p>
-                            <a href="#" class="text-sky-500 font-normal">more...</a>
+                            <a href="full-article.html" id="moreLink" class="text-sky-500 font-normal" style="display: none;">more</a>
                         </div>
                         <div class="text-green-50/95 text-xs font-normal">3 Oktober 2024</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Education News Section -->
-            <section class="w-64 h-56 px-4 py-2 bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex"">
+            <!-- EduHybrid Section -->
+            <section class="w-full h-56 px-4 py-2 bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex"">
                 <img class="w-28 h-36" src="https://via.placeholder.com/109x152" />
                 <div class="flex-col justify-start items-start gap-2 inline-flex">
                     <div class="h-40 flex-col justify-start items-start gap-2 flex">
-                        <div class="self-stretch text-green-50 text-sm font-medium font-['Poppins'] leading-normal">EduHybrid</div>
-                        <div class="self-stretch text-green-50 text-xs font-normal font-['Poppins'] leading-none">Enhance your learning experience with our interactive educational platform. Access a wide range of courses and resources to help you succeed in your educational journey.</div>
+                        <div class="self-stretch text-green-50 text-sm font-medium leading-normal">EduHybrid</div>
+                        <div class="self-stretch text-green-50 text-xs font-normal leading-none">Enhance your learning experience with our interactive educational platform. Access a wide range of courses and resources to help you succeed in your educational journey.</div>
                     </div>
                     <div class="w-16 p-0.5 bg-lime-400 rounded-lg justify-center items-center gap-2 inline-flex">
                         <div class="text-center text-gray-900 text-xs font-normal font-['Poppins'] leading-none">Learn More</div>
@@ -268,6 +270,28 @@
         // Panggil fungsi untuk bulan dan tahun saat ini
         const now = new Date();
         generateCalendar(now.getMonth(), now.getFullYear());
+
+        function toggleText(event) {
+            event.preventDefault(); // Mencegah tautan untuk melakukan navigasi
+            const textElement = document.getElementById('hiddenText');
+            if (textElement.style.display === 'none') {
+                textElement.style.display = 'block';
+            } else {
+                textElement.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const textElement = document.getElementById('textContent');
+            const moreLink = document.getElementById('moreLink');
+            const maxLength = 60; // Jumlah karakter yang ingin ditampilkan sebelum teks dipotong
+
+            if (textElement.textContent.length > maxLength) {
+                const visibleText = textElement.textContent.slice(0, maxLength);
+                textElement.textContent = visibleText + '...';
+                moreLink.style.display = 'inline'; // Tampilkan tautan "more"
+            }
+        });
     </script>
 </body>
 
