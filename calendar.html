@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+
+    <div class="calendar"></div>
+
+    <div class="sidebar bg-gray-900 text-white w-64">
+        <!-- Toggle Button -->
+        <button onclick="toggleMenu('menuContent')" class="group w-full p-2 flex items-center gap-2 hover:bg-lime-400">
+            <svg class="w-6 h-6 stroke-current text-gray-300 group-hover:text-black" viewBox="0 0 24 24" fill="none">
+                <!-- SVG icon here -->
+            </svg>
+            <span class="text-gray-300 text-base font-normal leading-6 group-hover:text-gray-900">Menu</span>
+        </button>
+    
+        <!-- Collapsible Menu Content -->
+        <div id="menuContent" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+            <a href="#" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                <svg class="w-6 h-6 stroke-current text-gray-300 group-hover:text-black" viewBox="0 0 24 24" fill="none">
+                    <!-- SVG icon here -->
+                </svg>
+                <span class="text-gray-300 text-base font-normal leading-6 group-hover:text-gray-900">Leger</span>
+            </a>
+            <a href="#" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                <svg class="w-6 h-6 stroke-current text-gray-300 group-hover:text-black" viewBox="0 0 24 24" fill="none">
+                    <!-- SVG icon here -->
+                </svg>
+                <span class="text-gray-300 text-base font-normal leading-6 group-hover:text-gray-900">Semester Report</span>
+            </a>
+        </div>
+    </div>
+    
+
+    <script src="assets/js/calendar.js"></script>
+</body>
+</html>
