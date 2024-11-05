@@ -1,4 +1,4 @@
-/*  */
+/* Calendar */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
@@ -167,3 +167,32 @@
   pointer-events: none;
   color: #484848;
 }
+
+/* Sidebar */
+.sidebar.collapsed {
+    width: 110px;
+}
+
+/* Sembunyikan teks dan logo ketika sidebar collapse */
+.sidebar.collapsed .text,
+.sidebar.collapsed .logo, 
+.sidebar.collapsed .arrow {
+    display: none;
+}
+
+.sidebar .icon {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+/* Tooltip */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+

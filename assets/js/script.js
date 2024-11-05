@@ -1,31 +1,29 @@
-const expand_btn = document.querySelector(".expand-btn");
-
-let activeIndex;
-
-expand_btn.addEventListener("click", () => {
-  document.body.classList.toggle("collapsed");
+// Toggle Sidebar
+document.getElementById('toggleSidebar').addEventListener('click', function() {
+  document.getElementById('sidebar').classList.toggle('collapsed');
 });
 
-const current = window.location.href;
+// Toggle Sidebar Arrow ketika di klik
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('toggleSidebar');
+  const arrowIcon = toggleButton.querySelector('svg');
 
-const allLinks = document.querySelectorAll(".sidebar-links a");
-
-allLinks.forEach((elem) => {
-  elem.addEventListener("click", function () {
-    const hrefLinkClick = elem.href;
-
-    allLinks.forEach((link) => {
-      if (link.href == hrefLinkClick) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
+  toggleButton.addEventListener('click', function () {
+      arrowIcon.classList.toggle('rotate-180');
   });
 });
 
-const searchInput = document.querySelector(".search__wrapper input");
+// Toggle Menu
+function toggleMenu(menuId) {
+  const menuContent = document.getElementById(menuId);
+  const arrow = document.getElementById(menuId === 'reportContent' ? 'reportArrow' : 'transactionArrow');
+  
+  if (menuContent.style.maxHeight) {
+      menuContent.style.maxHeight = null;
+      arrow.style.transform = "rotate(180deg)";
+  } else {
+      menuContent.style.maxHeight = menuContent.scrollHeight + "px";
+      arrow.style.transform = "rotate(0deg)";
+  }
+}
 
-searchInput.addEventListener("focus", (e) => {
-  document.body.classList.remove("collapsed");
-});
