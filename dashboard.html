@@ -17,7 +17,7 @@
 <body class="h-screen bg-zinc-900 text-white font-sans">
     <div class="h-full flex flex-col lg:flex-row overflow-hidden">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar w-full h-screen lg:sticky top-0 lg:w-64 lg:h-full flex-shrink-0 flex flex-col gap-8 p-4 transition-all duration-500 ease-in-out">
+        <aside id="sidebar" class="sidebar w-full h-screen lg:sticky top-0 lg:w-64 lg:h-full flex-shrink-0 flex flex-col gap-8 p-4 transition-all duration-300 ease-in-out">
             <nav class="w-full h-full p-4 bg-gray-900 rounded-3xl flex flex-col gap-2 overflow-y-auto">
                 <!-- Logo -->
                 <div class="w-full flex justify-between items-center my-4">
@@ -35,8 +35,8 @@
                     </button>
                 </div>
                 <!-- Dashboard -->
-                <a href="dashboard.html" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400 hover:text-gray-900">
-                    <svg class="icon w-6 h-6 stroke-current text-gray-300 group-hover:text-black" viewBox="0 0 24 24"
+                <a href="dashboard.html" class="group w-full p-2 rounded-lg flex items-center gap-2 bg-lime-400 text-gray-900">
+                    <svg class="icon w-6 h-6 stroke-current text-black" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Linear / Essentional, UI / Home Smile">
                             <path id="Vector"
@@ -47,9 +47,9 @@
                                 stroke-width="1.5" stroke-linecap="round" />
                         </g>
                     </svg>
-                    <span class="text text-gray-300 text-base font-normal leading-6 group-hover:text-gray-900">Dashboard</span>
+                    <span class="text text-base font-normal leading-6">Dashboard</span>
                 </a>
-                <a href="#" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
+                <a href="learning-data.html" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-lime-400">
                     <svg class="icon w-6 h-6 stroke-current text-gray-300 group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Linear / School / Notebook Minimalistic">
                             <path id="Vector"
@@ -281,7 +281,7 @@
                 <aside class="flex flex-col p-4 space-y-4" style="max-width: 330px;">
                     <!-- Notification Section -->
                      <section class="flex flex-row items-center justify-end space-x-2">
-                        <div class="w-12 h-12 p-2 bg-gray-900 rounded-full justify-center items-center relative shadow-lg dark:shadow-gray-800">
+                        <div class="w-12 h-12 p-2 bg-gray-900 rounded-full justify-center items-center relative shadow-md dark:shadow-gray-800">
                             <div class="absolute top-0 right-0 w-4 h-4 bg-white rounded-lg flex-col justify-center">
                                 <div class="self-stretch text-center text-gray-900 text-xs font-normal leading-normal">2</div>
                             </div>
@@ -294,7 +294,7 @@
                                 </svg>                                                       
                             </button>
                         </div>
-                        <label class="relative w-12 h-12 rounded-full cursor-pointer bg-white shadow-lg dark:shadow-gray-800 grid place-items-center dark:bg-gray-900">
+                        <label class="relative w-12 h-12 rounded-full cursor-pointer bg-white shadow-md dark:shadow-gray-800 grid place-items-center dark:bg-gray-900">
                             <input id="switch" type="checkbox" class="hidden peer">
                             
                             <!-- Moon Icon for Dark Mode -->
@@ -324,7 +324,7 @@
                                 <br>
                                 <span class="text-xs">9B</span>
                             </p>
-                            <hr class="w-full my-3 border-3 border-green-50">
+                            <hr class="w-full mb-4 border-3 border-green-50">
                             <div class="flex space-x-4">
                                 <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
                                     <img src="public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
@@ -366,77 +366,14 @@
     </div>
 
     <script>
-        var optionsTerm = {
-            chart: {
-                type: 'area',
-                height: '100%',
-                toolbar: { show: false }
-            },
-            series: [{
-                name: 'Performance',
-                data: [100, 75, 50, 25]
-            }],
-            xaxis: { categories: ['Term 1', 'Term 2', 'Term 3', 'Term 4'] },
-            fill: { opacity: 0.5 }
-        };
-
-        var termChart = new ApexCharts(document.querySelector("#termChart"), optionsTerm);
-        termChart.render();
-
-        function generateCalendar(month, year) {
-            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const firstDay = new Date(year, month, 1).getDay();
-
-            document.getElementById('currentMonth').innerText = `${monthNames[month]} ${year}`;
-            const calendarGrid = document.getElementById('calendarGrid');
-            calendarGrid.innerHTML = ''; i
-
-            // Tambahkan hari kosong untuk hari pertama bulan ini
-            for (let i = 0; i < firstDay; i++) {
-                const emptyCell = document.createElement('p');
-                calendarGrid.appendChild(emptyCell);
-            }
-
-            // Tambahkan hari dalam bulan
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dayCell = document.createElement('p');
-                dayCell.innerText = day;
-                calendarGrid.appendChild(dayCell);
-            }
-        }
-
-        // Panggil fungsi untuk bulan dan tahun saat ini
-        const now = new Date();
-        generateCalendar(now.getMonth(), now.getFullYear());
-
-        function toggleText(event) {
-            event.preventDefault(); // Mencegah tautan untuk melakukan navigasi
-            const textElement = document.getElementById('hiddenText');
-            if (textElement.style.display === 'none') {
-                textElement.style.display = 'block';
-            } else {
-                textElement.style.display = 'none';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const textElement = document.getElementById('textContent');
-            const moreLink = document.getElementById('moreLink');
-            const maxLength = 60; // Jumlah karakter yang ingin ditampilkan sebelum teks dipotong
-
-            if (textElement.textContent.length > maxLength) {
-                const visibleText = textElement.textContent.slice(0, maxLength);
-                textElement.textContent = visibleText + '...';
-                moreLink.style.display = 'inline'; // Tampilkan tautan "more"
-            }
-        });
+        
     </script>
 
     <!-- Script JS -->
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/calendar.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/chart.js"></script>
 </body>
 
 </html>
