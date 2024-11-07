@@ -6,10 +6,9 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Dashboard Layout</title>
-    <!-- <link href="src/output.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="css/custom.css">
     
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
@@ -22,7 +21,7 @@
                 <!-- Logo -->
                 <div class="w-full flex justify-between items-center my-4">
                     <div class="flex flex-col justify-center items-center">
-                        <img class="logo w-32 h-12" src="../public/logo-gis.png" alt="Logo GIS">
+                        <img class="logo w-32 h-12" src="../../public/logo-gis.png" alt="Logo GIS">
                         <p class="text text-center text-gray-900 dark:text-white text-sm font-medium leading-8">Junior High School</p>
                     </div>
                     <button id="toggleSidebar" class="relative px-2">
@@ -177,28 +176,28 @@
                                 <p class="text-gray-900 text-sm font-normal leading-snug">School Year</p>
                                 <p class="text-gray-900 text-xs font-normal">2024/2025</p>
                             </div>
-                            <img class="w-7 h-7" src="public/icons/dark/academic-year.svg">
+                            <img class="w-7 h-7" src="../public/icons/dark/academic-year.svg">
                         </div>
                         <div class="w-full px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
                             <div class="flex flex-col gap-2">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Term</p>
                                 <p class="text-gray-900 text-xs font-normal">2/4</p>
                             </div>
-                            <img class="w-7 h-7" src="public/icons/dark/term-Icon.svg">
+                            <img class="w-7 h-7" src="../public/icons/dark/term-Icon.svg">
                         </div>
                         <div class="w-full px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
                             <div class="flex flex-col gap-2">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Semester</p>
                                 <p class="text-gray-900 text-xs font-normal">1/2</p>
                             </div>
-                            <img class="w-7 h-7" src="public/icons/dark/semester.svg">
+                            <img class="w-7 h-7" src="../public/icons/dark/semester.svg">
                         </div>
                         <div class="w-full px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl flex justify-between items-start gap-4">
                             <div class="flex flex-col gap-2">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Subject</p>
                                 <p class="text-gray-900 text-xs font-normal">12</p>
                             </div>
-                            <img class="w-7 h-7" src="public/icons/dark/subject.svg">
+                            <img class="w-7 h-7" src="../public/icons/dark/subject.svg">
                         </div>
                     </section>
 
@@ -260,7 +259,7 @@
                         <hr class="w-full border-3 border-gray-900 dark:border-green-50">
                         <div class="flex items-center gap-4">
                             <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center flex-shrink-0">
-                                <img class="w-16 h-16" src="public/icons/dark/user-profile-icon.svg" loading="lazy">
+                                <img class="w-16 h-16" src="../public/icons/dark/user-profile-icon.svg" loading="lazy">
                             </div>
                             <div class="flex-1 flex flex-col justify-center gap-1">
                                 <div class="text-left text-base font-medium">Pembagian Rapot</div>
@@ -319,7 +318,7 @@
                     <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl flex flex-col items-center">
                         <div class="flex flex-col items-center">
                             <div class="relative w-24 h-24">
-                                <img class="w-24 h-24 rounded-full border-4 border-lime-400" src="assets/img/user.png" alt="User Profile">
+                                <img class="w-24 h-24 rounded-full border-4 border-lime-400" src="../assets/img/user.png" alt="User Profile">
                             </div>
                             <p class="text-center py-4">
                                 <span class="text-base">John Doe</span>
@@ -329,13 +328,13 @@
                             <hr class="w-full mb-4 border-3 border-green-50">
                             <div class="flex space-x-4">
                                 <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                                    <img src="public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
+                                    <img src="../public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
                                 </button>
                                 <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                                    <img src="public/icons/dark/group-icon.svg" alt="Group Icon">
+                                    <img src="../public/icons/dark/group-icon.svg" alt="Group Icon">
                                 </button>
                                 <button class="w-12 h-12 p-2 bg-lime-400 rounded-2xl flex justify-center items-center">
-                                    <img src="public/icons/dark/term-Icon.svg" alt="Term Icon">
+                                    <img src="../public/icons/dark/term-Icon.svg" alt="Term Icon">
                                 </button>
                             </div>
                         </div>
@@ -349,7 +348,7 @@
 
                     <!-- EduHybrid Section -->
                     <section class="w-full h-56 px-4 py-2 bg-[#efefef] dark:bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex"">
-                        <img class=" w-28 h-36" src="assets/img/eduhybrid.png" />
+                        <img class=" w-28 h-36" src="../assets/img/eduhybrid.png" />
                     <div class="flex-col justify-start items-start gap-2 inline-flex">
                         <div class="h-36 flex-col justify-start items-start gap-2 flex">
                             <div class="self-stretch pt-4 text-sm font-medium leading-normal">EduHybrid</div>
@@ -367,15 +366,11 @@
         </div>
     </div>
 
-    <script>
-        
-    </script>
-
     <!-- Script JS -->
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/calendar.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/chart.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 
 </html>
