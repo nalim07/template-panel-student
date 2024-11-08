@@ -44,37 +44,3 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-// Select the toggle switch input
-const themeToggleSwitch = document.getElementById('switch');
-
-// Function to toggle between light and dark mode
-function toggleTheme() {
-    if (themeToggleSwitch.checked) {
-        // Enable Dark Mode
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        // Enable Light Mode
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-// Event listener for the theme toggle switch
-themeToggleSwitch.addEventListener('change', toggleTheme);
-
-// Initialize theme based on saved preference (ignores device preference)
-function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-        themeToggleSwitch.checked = true;
-        document.documentElement.classList.add('dark');
-    } else {
-        themeToggleSwitch.checked = false;
-        document.documentElement.classList.remove('dark');
-    }
-}
-
-// Initialize theme on page load
-document.addEventListener('DOMContentLoaded', initializeTheme);

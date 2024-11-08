@@ -203,8 +203,4 @@
     transition: transform 500ms;
 }
 
-/* Light Mode */
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
+
