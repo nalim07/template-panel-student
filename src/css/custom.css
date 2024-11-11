@@ -196,11 +196,11 @@
     display: inline-block;
 }
 
-/* Switch Mode */
-.icon {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-    transition: transform 500ms;
+.theme-icon {
+  fill: black; /* Default untuk light mode */
 }
 
+.dark .theme-icon {
+  fill: white; /* Untuk dark mode */
+}
 
