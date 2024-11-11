@@ -2,15 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
-    --calendar-bg-color: #262829;
-    --calendar-font-color: #FFF;
+    --calendar-font-color: #52525b;
     --weekdays-border-bottom-color: #404040;
     --calendar-date-hover-color: #505050;
     --calendar-current-date-color: #1b1f21;
-    --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
+    --calendar-today-color: #131420;
     --calendar-today-innerborder-color: transparent;
     --calendar-nextprev-bg-color: transparent;
-    --next-prev-arrow-color : #FFF;
+    --next-prev-arrow-color : #131420;
     --calendar-border-radius: 16px;
     --calendar-prevnext-date-color: #484848
 }
@@ -23,15 +22,19 @@
 .calendar {
     font-family: 'IBM Plex Sans', sans-serif;
     position: relative;
-    width: 268px;
-    height: 284px;
+    width: 250px;
+    height: 262px;
     background: var(--calendar-bg-color);
     color: var(--calendar-font-color);
-    margin: 20px auto;
+    margin: 10px auto;
     box-sizing: border-box;
     overflow: hidden;
     font-weight: normal;
     border-radius: var(--calendar-border-radius);
+}
+
+.dark .calendar {
+    color: #B3B3B3;
 }
 
 .calendar-inner {
@@ -74,6 +77,10 @@
     font-weight: 500;
 }
 
+.dark .calendar .calendar-inner .calendar-body div>a {
+    color: #B3B3B3;
+}
+
 .calendar .calendar-inner .calendar-body div:hover {
     border: 1px solid var(--calendar-date-hover-color);
     border-radius: 4px;
@@ -93,19 +100,25 @@
     text-align: center;
     cursor: pointer;
     margin: 3px 0px;
-    background: var(--calendar-current-date-color);
     padding: 6px 0px;
     border-radius: 8px;
+    background: #131420;
+    color: #FFF;
     width: 70%;
     margin: auto;
     font-size: 0.8rem;
 }
 
+.dark .calendar .calendar-inner .calendar-today-date {
+    background: black;
+}
+
 .calendar .calendar-inner .calendar-controls .calendar-year-month {
     display: flex;
-    min-width: 90px;
+    min-width: auto;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-next {
@@ -116,11 +129,25 @@
 .calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
     font-weight: 500;
     font-size: 16px;
+    color: #131420;
+}
+
+.dark .calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.dark .calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+    color: #FFF;
 }
 
 .calendar .calendar-inner .calendar-body .calendar-today {
     background: var(--calendar-today-color);
-    border-radius: 4px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.dark .calendar .calendar-inner .calendar-body .calendar-today {
+    background: black; 
 }
 
 .calendar .calendar-inner .calendar-body .calendar-today:hover {
@@ -129,11 +156,12 @@
 
 .calendar .calendar-inner .calendar-body .calendar-today a {
     outline: 2px solid var(--calendar-today-innerborder-color);
+    color: #FFF;
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-next a,
 .calendar .calendar-inner .calendar-controls .calendar-prev a {
-    color: var(--calendar-font-color);
+    color: #a1a1aa;
     font-family: arial, consolas, sans-serif;
     font-size: 14px;
     text-decoration: none;
@@ -141,6 +169,11 @@
     display: inline-block;
     background: var(--calendar-nextprev-bg-color);
     margin: 6px 0 6px 0;
+}
+
+.dark .calendar .calendar-inner .calendar-controls .calendar-next a,
+.dark .calendar .calendar-inner .calendar-controls .calendar-prev a {
+    color: #a1a1aa;
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-next a svg,
@@ -154,11 +187,21 @@
     fill: var(--next-prev-arrow-color);
 }
 
+.dark .calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.dark .calendar .calendar-inner .calendar-controls .calendar-prev a svg path{
+    fill: #FFF;
+}
+
 .calendar .calendar-inner .calendar-body .prev-dates,
 .calendar .calendar-inner .calendar-body .next-dates {
-    color: var(--calendar-prevnext-date-color);
+    color: #a1a1aa;
     font-size: 0.7rem;
     font-weight: 500;
+}
+
+.dark .calendar .calendar-inner .calendar-body .prev-dates,
+.dark .calendar .calendar-inner .calendar-body .next-dates {
+    color: var(--calendar-font-color);
 }
 
 .calendar .calendar-inner .calendar-body .prev-dates:hover,
@@ -196,11 +239,60 @@
     display: inline-block;
 }
 
+/* Icon svg */
 .theme-icon {
-  fill: black; /* Default untuk light mode */
+  fill: black;
 }
 
 .dark .theme-icon {
-  fill: white; /* Untuk dark mode */
+  fill: white;
 }
 
+.arrow-collapse {
+    fill: black;
+    stroke: black;
+}
+
+.dark .arrow-collapse {
+    fill: white;
+    stroke: white;
+}
+
+/* icon svg learning data */
+.icon .icon-ld1 {
+    fill: #111A26;
+}
+
+.group:hover .icon .icon-ld1 {
+    fill: white;
+}
+
+.group:hover .icon .icon-ld2 {
+    fill: white;
+}
+
+.icon .icon-ld2 {
+    stroke: #111A26;
+}
+
+.group:hover .icon .icon-ld2 {
+    stroke: white;
+}
+
+.dark .icon .icon-ld1 {
+    fill: #EFEFEF;
+}
+
+.dark .icon .icon-ld2 {
+    stroke: #EFEFEF;
+}
+
+.dark .group:hover .icon .icon-ld1 {
+    fill: #111A26;
+}
+
+.dark .group:hover .icon .icon-ld2 {
+    stroke: #111A26;
+}
+
+/* --------------------------------- */

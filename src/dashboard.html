@@ -26,8 +26,8 @@
 <body class="h-screen dark:bg-background-dark text-gray-900 dark:text-white">
     <div class="h-full flex flex-col lg:flex-row overflow-hidden">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar w-full h-screen lg:sticky top-0 lg:w-64 lg:h-full flex-shrink-0 flex flex-col gap-8 p-4 transition-all duration-300 ease-in-out">
-            <nav class="w-full h-full p-4 bg-zinc-100 dark:bg-gray-900 rounded-3xl flex flex-col gap-2 overflow-y-auto">
+        <aside id="sidebar" class="sidebar w-full h-screen lg:sticky top-0 lg:w-64 lg:h-full flex-shrink-0 flex flex-col gap-4 p-4 transition-all duration-300 ease-in-out">
+            <nav class="w-full h-full p-4 bg-zinc-100 dark:bg-gray-900 rounded-3xl flex flex-col gap-2 overflow-y-auto shadow-md">
                 <!-- Logo -->
                 <div class="w-full flex justify-between items-center my-4">
                     <div class="flex flex-col justify-center items-center">
@@ -35,10 +35,10 @@
                         <p class="text text-center text-gray-900 dark:text-white text-sm font-medium leading-8">Junior High School</p>
                     </div>
                     <button id="toggleSidebar" class="relative px-2">
-                        <svg id="sidebarArrow" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 32 32"
+                        <svg id="sidebarArrow" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 arrow-collapse" viewBox="0 0 32 32"
                             fill="none">
                             <path d="M26.6666 16L5.33329 16M5.33329 16L13.3333 24M5.33329 16L13.3333 8"
-                                stroke="#EFEFEF" stroke-opacity="0.933333" stroke-width="1.5" stroke-linecap="round"
+                                stroke-opacity="0.933333" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
@@ -60,13 +60,9 @@
                 </a>
                 <!-- Learning Data -->
                 <a href="learning-data.html" class="group w-full p-2 rounded-lg flex items-center gap-2 hover:bg-[#16a0f9] dark:hover:bg-lime-400">
-                    <svg class="icon w-6 h-6 stroke-current text-gray-900 dark:text-white dark:group-hover:text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Linear / School / Notebook Minimalistic">
-                            <path id="Vector"
-                                d="M7.4155 3.87264L7.54329 3.38836C8.34181 3.64996 9.20181 4.04262 9.95511 4.42458L9.72136 4.86666C8.98851 4.4954 8.16818 4.12171 7.4155 3.87264ZM21.6777 4.43332C21.5185 3.89981 21.1105 3.48494 20.5932 3.33128L20.5751 2.81057C21.3857 2.98021 22.0093 3.62429 22.1939 4.43332H21.6777ZM19.5738 2.78995L19.5912 3.28975C18.7559 3.33464 17.8387 3.42573 17.056 3.60148L16.9123 3.12142C17.7465 2.93079 18.7133 2.83583 19.5738 2.78995ZM21.75 5.43332H22.25V15.6437H21.75V5.43332ZM21.6774 16.6437H22.1944C22.0028 17.4912 21.3351 18.1583 20.4966 18.3896L20.4645 17.8772C21.0487 17.682 21.5064 17.2189 21.6774 16.6437ZM13.2879 20.495C12.4589 20.8007 11.5411 20.8007 10.7121 20.495L10.9499 20.049C11.6285 20.2827 12.3715 20.2827 13.0501 20.049L13.2879 20.495ZM13.9532 19.6172C14.7282 19.2206 15.6258 18.8064 16.4567 18.5343L16.5845 19.0186C15.8005 19.278 14.9434 19.6725 14.1884 20.0585L13.9532 19.6172ZM17.5513 18.7632L17.4235 18.2789C18.0695 18.1474 18.7947 18.0632 19.4708 18.0089L19.502 18.5081C18.8481 18.5607 18.1594 18.6412 17.5513 18.7632ZM4.52922 18.0089C5.20529 18.0632 5.93046 18.1474 6.57646 18.2789L6.44867 18.7632C5.84058 18.6412 5.15186 18.5607 4.498 18.5081L4.52922 18.0089ZM7.4155 19.0186L7.5433 18.5343C8.37416 18.8064 9.27181 19.2206 10.0468 19.6172L9.81159 20.0585C9.0566 19.6725 8.19946 19.278 7.4155 19.0186ZM3.50346 18.3896C2.66486 18.1583 1.99717 17.4912 1.80556 16.6437H2.32265C2.4936 17.2189 2.95128 17.682 3.53551 17.8772L3.50346 18.3896ZM2.25 15.6437H1.75V5.49792H2.25V15.6437ZM1.80603 4.49792C1.99643 3.66292 2.65372 3.00531 3.49503 2.85419L3.46309 3.37382C2.92027 3.51741 2.48736 3.94397 2.32226 4.49792H1.80603ZM4.46585 3.35956L4.49653 2.86041C5.18195 2.91456 5.92011 2.99942 6.57646 3.13297L6.44867 3.61723C5.83053 3.49324 5.12915 3.41221 4.46585 3.35956ZM10.6234 5.30004L10.8597 4.8532C11.5841 5.09991 12.381 5.081 13.0965 4.80341L13.3495 5.24066C12.4827 5.59777 11.5044 5.62148 10.6234 5.30004ZM14.2344 4.77323L13.9839 4.34036C14.6062 3.99695 15.299 3.65232 15.9543 3.40814L16.098 3.8882C15.4877 4.11822 14.8341 4.4427 14.2344 4.77323Z"
-                                class="dark:group-hover:fill-black group-hover:stroke-white dark:group-hover:stroke-black" />
-                            <path id="Vector_2" d="M12 5.50049V20.5005" stroke="#111A26 dark:stroke-white" stroke-width="1.5" class="group-hover:stroke-white dark:group-hover:stroke-black" />
-                        </g>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon w-6 h-6" viewBox="0 0 24 24" fill="none">
+                        <path class="icon-ld1 group-hover" d="M2.75 16.1436V4.99784H1.25V16.1436H2.75ZM22.75 16.1436V4.93324H21.25V16.1436H22.75ZM20.0559 2.26824C18.9175 2.3079 17.4296 2.42631 16.2849 2.76899L16.7151 4.20598C17.6643 3.92183 18.9892 3.80631 20.1081 3.76733L20.0559 2.26824ZM16.2849 2.76899C15.2899 3.06688 14.1706 3.64872 13.2982 4.15367L14.0495 5.45192C14.9 4.95973 15.8949 4.45153 16.7151 4.20598L16.2849 2.76899ZM3.93639 3.82352C4.90238 3.88289 5.99643 3.99834 6.80864 4.21266L7.19136 2.76231C6.23055 2.50877 5.01517 2.38699 4.02841 2.32634L3.93639 3.82352ZM6.80864 4.21266C7.77076 4.46655 8.95486 5.022 9.93167 5.53852L10.6328 4.21249C9.63736 3.6861 8.32766 3.06216 7.19136 2.76231L6.80864 4.21266ZM13.9804 20.7311C14.9714 20.2028 16.1988 19.6205 17.1914 19.3586L16.8086 17.9082C15.6383 18.217 14.2827 18.8701 13.2748 19.4074L13.9804 20.7311ZM17.1914 19.3586C17.9943 19.1467 19.0732 19.0313 20.032 18.9714L19.9383 17.4743C18.9582 17.5356 17.7591 17.6574 16.8086 17.9082L17.1914 19.3586ZM10.7252 19.4074C9.71727 18.8701 8.3617 18.217 7.19136 17.9082L6.80864 19.3586C7.8012 19.6205 9.0286 20.2028 10.0196 20.7311L10.7252 19.4074ZM7.19136 17.9082C6.24092 17.6574 5.04176 17.5356 4.06168 17.4743L3.96804 18.9714C4.9268 19.0313 6.00566 19.1467 6.80864 19.3586L7.19136 17.9082ZM21.25 16.1436C21.25 16.8294 20.6817 17.4278 19.9383 17.4743L20.032 18.9714C21.5062 18.8792 22.75 17.6798 22.75 16.1436H21.25ZM22.75 4.93324C22.75 3.46993 21.5847 2.21499 20.0559 2.26824L20.1081 3.76733C20.7229 3.74592 21.25 4.25165 21.25 4.93324H22.75ZM1.25 16.1436C1.25 17.6798 2.49378 18.8792 3.96804 18.9714L4.06168 17.4743C3.31831 17.4278 2.75 16.8294 2.75 16.1436H1.25ZM13.2748 19.4074C12.4825 19.8298 11.5175 19.8298 10.7252 19.4074L10.0196 20.7311C11.2529 21.3885 12.7471 21.3885 13.9804 20.7311L13.2748 19.4074ZM13.2982 4.15367C12.4801 4.62713 11.4617 4.65075 10.6328 4.21249L9.93167 5.53852C11.2239 6.22181 12.791 6.18029 14.0495 5.45192L13.2982 4.15367ZM2.75 4.99784C2.75 4.30066 3.30243 3.78455 3.93639 3.82352L4.02841 2.32634C2.47017 2.23057 1.25 3.49869 1.25 4.99784H2.75Z"  fill-opacity="0.996078"/>
+                        <path d="M12 5.50098V20.501" class="icon-ld2" stroke-opacity="0.996078" stroke-width="1.5"/>
                     </svg>
                     <span class="text text-gray-900 dark:text-white text-base font-normal leading-6 group-hover:text-white dark:group-hover:text-black">Learning Data</span>
                 </a>
@@ -181,28 +177,28 @@
                 <main class="flex-1 p-4">
                     <!-- Overview Cards -->
                     <section class="w-full h-20 mb-8 justify-between items-center inline-flex space-x-4 md:space-x-6 lg:space-x-8">
-                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow justify-end items-start gap-1 inline-flex">
+                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow-md justify-end items-start gap-1 inline-flex">
                             <div class="w-24 flex-col justify-start items-start gap-0.5 inline-flex">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">School Year</p>
                                 <p class="text-gray-900 text-xs font-normal">2024/2025</p>
                             </div>
                             <img class="w-7 h-7" src="../public/icons/dark/academic-year.svg">
                         </div>
-                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow justify-end items-start gap-1 inline-flex">
+                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow-md justify-end items-start gap-1 inline-flex">
                             <div class="w-24 flex-col justify-start items-start gap-0.5 inline-flex">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Term</p>
                                 <p class="text-gray-900 text-xs font-normal">2/4</p>
                             </div>
                             <img class="w-7 h-7" src="../public/icons/dark/term-Icon.svg">
                         </div>
-                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow justify-end items-start gap-1 inline-flex">
+                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow-md justify-end items-start gap-1 inline-flex">
                             <div class="w-24 flex-col justify-start items-start gap-0.5 inline-flex">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Semester</p>
                                 <p class="text-gray-900 text-xs font-normal">1/2</p>
                             </div>
                             <img class="w-7 h-7" src="../public/icons/dark/semester.svg">
                         </div>
-                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow justify-end items-start gap-1 inline-flex">
+                        <div class="w-36 h-20 px-3 py-4 bg-[#efefef] dark:bg-lime-400 rounded-2xl shadow-md justify-end items-start gap-1 inline-flex">
                             <div class="w-24 flex-col justify-start items-start gap-0.5 inline-flex">
                                 <p class="text-gray-900 text-sm font-normal leading-snug">Subject</p>
                                 <p class="text-gray-900 text-xs font-normal">12</p>
@@ -261,7 +257,7 @@
                     </section>
 
                     <!-- Lesson Timetable -->
-                    <section class="mt-6 bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl">
+                    <section class="mt-6 bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl shadow-md">
                         <h3 class="font-semibold text-lg mb-4">Lesson Timetable</h3>
                         <table class="w-full text-sm">
                             <thead>
@@ -288,7 +284,7 @@
                     </section>
 
                     <!-- Latest Information Section -->
-                    <section class="h-64 px-6 py-4 mt-6 bg-[#efefef] dark:bg-gray-900 rounded-3xl flex-col justify-start items-start gap-6 inline-flex">
+                    <section class="h-64 px-6 py-4 mt-6 bg-[#efefef] dark:bg-gray-900 rounded-3xl flex-col justify-start items-start gap-6 inline-flex shadow-md">
                         <div class="self-stretch mt-4 justify-start items-center gap-2 inline-flex">
                             <div class="text-center text-base font-medium">Latest Information</div>
                         </div>
@@ -315,10 +311,10 @@
                 </main>
 
                 <!-- User Profile, Calendar, and Latest Information -->
-                <aside class="flex flex-col p-4 space-y-4" style="max-width: 330px;">
+                <aside class="flex flex-col p-4 space-y-4" style="max-width: 288px;">
                     <!-- Notification Section -->
-                     <section class="flex flex-row items-center justify-end space-x-2">
-                        <div class="w-12 h-12 p-2 bg dark:bg-gray-900 rounded-full justify-center items-center relative shadow-sm shadow-gray-800">
+                    <section class="flex flex-row items-center justify-end space-x-2">
+                        <div class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 rounded-full justify-center items-center relative shadow-sm shadow-gray-800">
                             <div class="absolute top-0 right-0 w-4 h-4 bg-white rounded-lg flex-col justify-center">
                                 <div class="self-stretch text-center text-gray-900 text-xs font-normal leading-normal">2</div>
                             </div>
@@ -372,7 +368,7 @@
                     </section>
 
                     <!-- User Profile Section -->
-                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl flex flex-col items-center">
+                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl flex flex-col items-center shadow-md">
                         <div class="flex flex-col items-center">
                             <div class="relative w-24 h-24">
                                 <img class="w-24 h-24 rounded-full border-4 dark:border-lime-400 border-gray-900" src="../assets/img/user.png" alt="User Profile">
@@ -398,25 +394,24 @@
                     </section>
 
                     <!-- Calendar Section -->
-                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl">
-                        <h3 class="font-semibold text-lg">Calendar</h3>
+                    <section class="h-72 bg-white-99 dark:bg-gray-900 rounded-2xl shadow-md">
                         <div class="calendar"></div>
                     </section>
 
                     <!-- EduHybrid Section -->
-                    <section class="w-full h-56 px-4 py-2 bg-[#efefef] dark:bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex"">
-                        <img class=" w-28 h-36" src="../assets/img/eduhybrid.png" />
-                    <div class="flex-col justify-start items-start gap-2 inline-flex">
-                        <div class="h-36 flex-col justify-start items-start gap-2 flex">
-                            <div class="self-stretch pt-4 text-sm font-medium leading-normal">EduHybrid</div>
-                            <div class="self-stretch text-xs font-normal leading-none">Enhance your learning
-                                experience with our interactive educational platform. Access a wide range of courses and
-                                resources to help you succeed in your educational journey.</div>
+                    <section class="w-full h-56 bg-[#efefef] dark:bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex shadow-md">
+                        <img class=" w-28 h-36 px-1" src="../assets/img/eduhybrid.png" />
+                        <div class="flex-col justify-start items-start gap-2 inline-flex">
+                            <div class="h-36 flex-col justify-start items-start gap-2 flex">
+                                <div class="self-stretch pt-2 text-sm font-medium leading-normal">EduHybrid</div>
+                                <div class="self-stretch text-xs font-normal leading-none">Enhance your learning
+                                    experience with our interactive educational platform. Access a wide range of courses and
+                                    resources to help you succeed in your educational journey.</div>
+                            </div>
+                            <div class="w-20 h-5 p-1 dark:bg-stabilo bg-gray-900 rounded-2xl justify-center items-center inline-flex">
+                                <a href="#" class="text-center dark:text-gray-900 text-white text-xs font-normal leading-none">Learn More</a>
+                            </div>
                         </div>
-                        <div class="w-20 h-5 p-1 dark:bg-lime-400 bg-gray-900 rounded-2xl justify-center items-center inline-flex">
-                            <a href="#" class="text-center dark:text-gray-900 text-white text-xs font-normal leading-none">Learn More</a>
-                        </div>
-                    </div>
                     </section>
                 </aside>
             </div>
