@@ -18,10 +18,10 @@
       </script>
 </head>
 <body class="h-screen">
-    <div class="h-screen flex flex-col lg:flex-row bg-cover bg-bg-login bg-center">
+    <div class="h-screen flex flex-col lg:flex-row bg-cover bg-bg-login bg-center">        
         <!-- Left Illustration Section (70% width) and Greeting Text -->
-        <div class="w-full lg:w-7/12 lg:relative h-full flex-col items-center lg:items-start gap-8 p-6 lg:p-8 lg:flex hidden">
-            <div class="absolute inset-0 flex flex-col lg:flex h-full bg-blue-700/80 rounded-tr-3xl rounded-br-3xl shadow-lg px-8 lg:px-24 py-8 lg:py-16">
+        <div class="w-full lg:w-7/12 lg:relative h-full flex-col items-center bg-blue-700/80 rounded-tr-3xl rounded-br-3xl shadow-lg px-6 py-8 lg:items-start gap-8 lg:px-16 lg:py-16 lg:flex hidden">
+            <!-- <div class="absolute inset-0 flex flex-col lg:flex h-full bg-blue-700/80 rounded-tr-3xl rounded-br-3xl shadow-lg px-8 lg:px-24 py-8 lg:py-16"> -->
                 <div class="w-full h-full flex flex-col items-center lg:items-start justify-center">
                     <!-- Ilustrasi -->
                     <div class="w-10/12 lg:w-8/12 mb-4 lg:mb-8 flex justify-center lg:justify-start">
@@ -36,18 +36,18 @@
                         <a href="#" class="w-28 lg:w-32 p-2 bg-white rounded-2xl text-sky-500 text-center text-sm lg:text-base font-normal block mx-auto lg:mx-0">Read more</a>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>        
         
         <!-- Right Login Section (30% width) -->
-        <div class="w-full lg:w-5/12 flex justify-center items-center">
-            <form action="" method="POST" class="w-full max-w-sm p-8 flex flex-col gap-6">
+        <div class="w-full flex justify-center items-center min-h-screen px-4 lg:w-5/12">
+            <form action="" method="POST" class="w-80 max-w-sm p-6 flex flex-col gap-6">
                 <!-- Greeting Text -->
                 <div class="flex flex-col items-center text-center gap-2">
-                    <h1 class="text-2xl font-bold text-zinc-800">Hello Again</h1>
+                    <h1 class="text-2xl font-bold text-zinc-800">Hello Again!</h1>
                     <p class="text-lg font-normal text-zinc-800">Welcome Back, Please Sign In</p>
                 </div>
-                
+        
                 <!-- Input Fields -->
                 <div class="flex flex-col gap-7">
                     <!-- Username -->
@@ -57,7 +57,7 @@
                                 <path d="M17.887 20.0844C17.5691 17.674 16.3881 16 12 16C7.61186 16 6.43082 17.674 6.11295 20.0843M17.887 20.0844C20.38 18.2659 22 15.3221 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.3221 3.61992 18.2658 6.11295 20.0843M17.887 20.0844C16.2354 21.2891 14.2007 22 12 22C9.79923 22 7.7645 21.2891 6.11295 20.0843M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" stroke="#676767" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" placeholder="Username" class="w-full bg-transparent text-base text-zinc-800 outline-none" required/>
+                        <input type="text" placeholder="Username" class="w-full bg-transparent text-base text-zinc-800 outline-none" required />
                     </div>
                     <!-- Password -->
                     <div class="flex items-center bg-zinc-100/80 rounded-2xl border border-neutral-600/80 h-12 px-4 py-3.5 gap-3">
@@ -84,15 +84,15 @@
                         </div>
                     </div>
                 </div>
-                
+        
                 <!-- Remember Me and Login Button -->
                 <div class="flex items-center gap-2 pl-2">
                     <input type="checkbox" class="w-4 h-4">
                     <label class="text-zinc-800 text-sm">Remember me</label>
                 </div>
-                <button class="w-full h-12 p-2 bg-[#17A1FA] rounded-2xl flex justify-center items-center text-white text-xl font-bold mt-4 hover:bg-[#3D6CC9]">Login</button>
+                <button class="w-full h-12 p-2 bg-[#17A1FA] rounded-2xl flex justify-center items-center text-white text-xl font-bold hover:bg-[#3D6CC9]">Login</button>
             </form>
-        </div>
+        </div>        
     </div>
 </body>
 
