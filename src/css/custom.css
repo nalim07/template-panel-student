@@ -287,12 +287,4 @@
     stroke: #EFEFEF;
 }
 
-.dark .group:hover .icon .icon-ld1 {
-    fill: #111A26;
-}
-
-.dark .group:hover .icon .icon-ld2 {
-    stroke: #111A26;
-}
-
 /* --------------------------------- */
