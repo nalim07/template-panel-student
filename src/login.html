@@ -62,34 +62,34 @@
         }
       </style>
 </head>
-<body class="h-screen overflow-hidden">
-    <div class="h-screen flex flex-col lg:flex-row bg-cover bg-bg-login bg-center dark:bg-dark-login">        
+<body class="h-screen overflow-hidden bg-cover bg-bg-login dark:bg-dark-login">
+    <div class="flex flex-col lg:flex-row md:flex-col">        
+        <div class="w-56 h-56 bg-sky-500/25 rounded-full absolute bottom-60 right-0 hidden lg:block"></div>
+        <div class="w-72 h-72 bg-sky-500/25 rounded-full absolute -bottom-12 right-0 hidden lg:block"></div>
         <!-- Left Illustration Section (70% width) and Greeting Text -->
-        <div class="lg:w-7/12 lg:relative h-full flex-col items-center lg:items-start gap-8 p-6 lg:p-8 lg:flex hidden">
-            <div class="w-56 h-56 bg-sky-500/25 rounded-full absolute bottom-60 right-0"></div>
-            <div class="w-72 h-72 bg-sky-500/25 rounded-full absolute -bottom-12 right-0"></div>
-            <div class="absolute inset-0 flex flex-col lg:flex h-full bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-tr-3xl rounded-br-3xl shadow-lg px-8 lg:px-16 py-8 lg:py-16">
-                <div class="w-full h-full flex flex-col items-center justify-center">
-                    <!-- Ilustration -->
-                    <div class="w-10/12 lg:w-8/12 mb-2 lg:mb-1 flex justify-center">
-                        <img src="/public/light-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full dark:hidden">
-                        <img src="/public/dark-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full hidden dark:block">
-                    </div>
-                    <!-- Greeting Text -->
-                    <div class="text-center lg:text-left w-full p-4">
-                        <h1 class="text-white text-4xl lg:text-3xl font-bold leading-8 lg:leading-10 mb-4">GMELS</h1>
-                        <p class="text-white text-base lg:text-base leading-relaxed mb-6">
-                            The cutting-edge Global Indonesia School Management and Learning System! GMELS creates a vibrant and connected educational environment for the Global Indonesia School community.
-                        </p>
-                        <a href="#" class="w-28 lg:w-32 p-2 bg-white rounded-xl text-[#6E62E5] dark:text-violet-900 text-center text-sm lg:text-base font-normal block mx-auto lg:mx-0">Read more</a>
-                    </div>
-                </div>
+        <div class="h-80 md:h-96 flex-col bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-bl-3xl rounded-br-3xl shadow-lg items-center p-8 gap-8">
+            <!-- Ilustration -->
+            <div class="w-10/12 lg:w-8/12 mb-2 lg:mb-1 flex justify-center">
+                <img src="/public/light-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full hidden">
+                <img src="/public/dark-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full hidden dark:block">
             </div>
+            <!-- Greeting Text -->
+            <div class="w-full h-52 text-start lg:text-left gap-4 bg-red-500">
+                <h1 class="text-white text-3xl lg:text-3xl font-bold leading-loose lg:leading-10">GMELS</h1>
+                <p class="text-white text-sm lg:text-base leading-relaxed mb-6">
+                    The cutting-edge Global Indonesia School Management and Learning System! GMELS creates a vibrant and connected educational environment for the Global Indonesia School community.
+                </p>
+                <a href="https://eduhybrid.id/" class="w-auto lg:w-32 p-2 px-6 bg-white rounded-xl text-[#6E62E5] dark:text-violet-900 text-center text-sm lg:text-base font-normal lg:block mx-auto lg:mx-0 hover:bg-[#6E62E5] hover:text-white">Read more</a>
+            </div>
+            <!-- <div class="flex flex-col lg:flex h-80 md:h-96 px-8 lg:px-16 py-8 lg:py-16"> -->
+                <!-- <div class="w-full h-full flex flex-col items-start justify-start lg:justify-center"> -->
+                <!-- </div> -->
+            <!-- </div> -->
         </div>        
         
         <!-- Right Login Section (30% width) -->
-        <div class="w-full flex justify-center items-center min-h-screen px-4 lg:w-5/12">
-            <form action="" method="POST" class="w-80 max-w-sm p-6 flex flex-col gap-6">
+        <div class="w-full px-8 py-6 justify-center items-center min-h-screen lg:w-5/12">
+            <form action="" method="POST" class="w-full max-w-sm flex flex-col rounded-3xl p-6 gap-6">
                 <!-- Greeting Text -->
                 <div class="flex flex-col items-center text-center gap-2">
                     <h1 class="text-2xl font-bold text-zinc-800 dark:text-[#EFEFEF]">Hello Again!</h1>
