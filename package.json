@@ -6,8 +6,8 @@
     "tailwindcss": "^3.4.14"
   },
   "scripts": {
-    "build": "postcss ./src/css/tailwind.css -o ./public/output.css",
-    "dev": "postcss ./src/css/tailwind.css -o ./public/output.css --watch"
+    "build": "postcss ./src/css/tailwind.css -o ./dist/output.css",
+    "dev": "postcss ./src/css/tailwind.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
