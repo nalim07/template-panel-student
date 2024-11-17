@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,140 +8,171 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            screens: {
-              'sm': '640px',
-              'md': '768px',
-              'lg': '1024px',
-              'xl': '1280px',
-              '2xl': '1536px',
-            },
-            darkMode: 'class',
-            extend: {
-              backgroundImage: {
-                'bg-login': "url('/public/bg-login.png')",
-                'dark-login': "url('/public/dark-login.png')",
-                'dark-ilustration': "url('/public/dark-ilustration.svg')"
-              }
+            theme: {
+                screens: {
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                    '2xl': '1536px',
+                },
+                darkMode: 'class',
+                extend: {
+                    backgroundImage: {
+                        'bg-login': "url('/public/bg-login.png')",
+                        'dark-login': "url('/public/dark-login.png')",
+                        'dark-ilustration': "url('/public/dark-ilustration.svg')"
+                    }
+                }
             }
-          }
         }
     </script>
     <style>
         /* Gaya dasar untuk checkbox */
         .custom-checkbox {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          width: 1.25rem;
-          height: 1.25rem;
-          background-color: #EFEFEF;
-          border: 2px solid #676767;
-          border-radius: 35%;
-          cursor: pointer;
-          position: relative;
-          transition: background-color 0.3s, border-color 0.3s;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: #EFEFEF;
+            border: 2px solid #676767;
+            border-radius: 35%;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s, border-color 0.3s;
         }
-      
+
         /* Saat checkbox diaktifkan */
         .custom-checkbox:checked {
-          background-color: #6E62E5;
-          border-color: #6E62E5;
+            background-color: #6E62E5;
+            border-color: #6E62E5;
         }
-      
+
         /* Tanda centang */
         .custom-checkbox:checked::after {
-          content: '';
-          position: absolute;
-          top: 3px;
-          left: 6px;
-          width: 5px;
-          height: 9px;
-          border: solid white;
-          border-width: 0 2px 2px 0;
-          transform: rotate(45deg);
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 6px;
+            width: 5px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
-      </style>
+    </style>
 </head>
-<body class="h-screen overflow-hidden bg-cover bg-bg-login dark:bg-dark-login">
-    <div class="flex flex-col lg:flex-row md:flex-col">        
+
+<body class="h-screen md:overflow-hidden lg:overflow-hidden bg-cover bg-bg-login dark:bg-dark-login">
+    <div class="flex flex-col lg:flex-row md:flex-col">
         <div class="w-56 h-56 bg-sky-500/25 rounded-full absolute bottom-60 right-0 hidden lg:block"></div>
         <div class="w-72 h-72 bg-sky-500/25 rounded-full absolute -bottom-12 right-0 hidden lg:block"></div>
         <!-- Left Illustration Section (70% width) and Greeting Text -->
-        <div class="h-80 md:h-96 flex-col bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-bl-3xl rounded-br-3xl shadow-lg items-center p-8 gap-8">
+        <div class="h-72 md:h-96 flex flex-col md:flex-row bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-bl-3xl rounded-br-3xl shadow-lg items-center px-8 gap-4">
             <!-- Ilustration -->
-            <div class="w-10/12 lg:w-8/12 mb-2 lg:mb-1 flex justify-center">
-                <img src="/public/light-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full hidden">
-                <img src="/public/dark-ilustration.svg" class="w-full h-full max-w-sm lg:max-w-full hidden dark:block">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="/public/light-ilustration.svg" class="md:w-8/12 lg:w-full h-auto max-w-sm hidden md:block dark:hidden">
+                <img src="/public/dark-ilustration.svg" class="md:w-8/12 lg:w-full h-auto max-w-sm hidden dark:md:block">
             </div>
+
             <!-- Greeting Text -->
-            <div class="w-full h-52 text-start lg:text-left gap-4 bg-red-500">
-                <h1 class="text-white text-3xl lg:text-3xl font-bold leading-loose lg:leading-10">GMELS</h1>
-                <p class="text-white text-sm lg:text-base leading-relaxed mb-6">
-                    The cutting-edge Global Indonesia School Management and Learning System! GMELS creates a vibrant and connected educational environment for the Global Indonesia School community.
+            <div class="w-full md:w-1/2 flex flex-col text-left justify-center gap-4">
+                <h1 class="text-white text-3xl font-bold leading-loose lg:leading-10">GMELS</h1>
+                <p class="text-white text-sm lg:text-base leading-relaxed">
+                    The cutting-edge Global Indonesia School Management and Learning System! GMELS creates a vibrant and
+                    connected educational environment for the Global Indonesia School community.
                 </p>
-                <a href="https://eduhybrid.id/" class="w-auto lg:w-32 p-2 px-6 bg-white rounded-xl text-[#6E62E5] dark:text-violet-900 text-center text-sm lg:text-base font-normal lg:block mx-auto lg:mx-0 hover:bg-[#6E62E5] hover:text-white">Read more</a>
+                <a href="https://eduhybrid.id/"
+                    class="flex justify-center w-32 p-2 px-4 bg-white rounded-xl text-[#6E62E5] dark:text-violet-900 text-center text-sm lg:text-base font-normal hover:bg-[#6E62E5] hover:text-white">
+                    Read more
+                </a>
             </div>
-            <!-- <div class="flex flex-col lg:flex h-80 md:h-96 px-8 lg:px-16 py-8 lg:py-16"> -->
-                <!-- <div class="w-full h-full flex flex-col items-start justify-start lg:justify-center"> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        </div>        
-        
+        </div>
+
+
         <!-- Right Login Section (30% width) -->
-        <div class="w-full px-8 py-6 justify-center items-center min-h-screen lg:w-5/12">
+        <div class="w-full p-8 md:p-16 flex justify-center min-h-screen lg:w-5/12">
             <form action="" method="POST" class="w-full max-w-sm flex flex-col rounded-3xl p-6 gap-6">
                 <!-- Greeting Text -->
                 <div class="flex flex-col items-center text-center gap-2">
                     <h1 class="text-2xl font-bold text-zinc-800 dark:text-[#EFEFEF]">Hello Again!</h1>
                     <p class="text-lg font-normal text-zinc-800 dark:text-[#EFEFEF]">Welcome Back, Please Sign In</p>
                 </div>
-        
+
                 <!-- Input Fields -->
                 <div class="flex flex-col gap-7">
                     <!-- Username -->
-                    <div class="flex items-center bg-[#EFEFEF] rounded-2xl border border-neutral-600/80 h-11 px-4 py-3.5 gap-3">
+                    <div
+                        class="flex items-center bg-[#EFEFEF] rounded-2xl border border-neutral-600/80 h-11 px-4 py-3.5 gap-3">
                         <div class="w-6 h-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17.887 20.0844C17.5691 17.674 16.3881 16 12 16C7.61186 16 6.43082 17.674 6.11295 20.0843M17.887 20.0844C20.38 18.2659 22 15.3221 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.3221 3.61992 18.2658 6.11295 20.0843M17.887 20.0844C16.2354 21.2891 14.2007 22 12 22C9.79923 22 7.7645 21.2891 6.11295 20.0843M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" stroke="#676767" stroke-width="1.5" stroke-linecap="round"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M17.887 20.0844C17.5691 17.674 16.3881 16 12 16C7.61186 16 6.43082 17.674 6.11295 20.0843M17.887 20.0844C20.38 18.2659 22 15.3221 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.3221 3.61992 18.2658 6.11295 20.0843M17.887 20.0844C16.2354 21.2891 14.2007 22 12 22C9.79923 22 7.7645 21.2891 6.11295 20.0843M15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z"
+                                    stroke="#676767" stroke-width="1.5" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <input type="text" id="username" placeholder="Username" class="w-full bg-transparent text-base text-zinc-800  outline-none dark:placeholder-[#676767]" required />
+                        <input type="text" id="username" placeholder="Username"
+                            class="w-full bg-transparent text-base text-zinc-800  outline-none dark:placeholder-[#676767]"
+                            required />
                     </div>
                     <!-- Password -->
-                    <div class="flex items-center bg-[#EFEFEF] rounded-2xl border border-neutral-600/80 h-11 px-4 py-3.5 gap-3">
+                    <div
+                        class="flex items-center bg-[#EFEFEF] rounded-2xl border border-neutral-600/80 h-11 px-4 py-3.5 gap-3">
                         <div class="w-6 h-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M2 16C2 13.1716 2 11.7574 2.87868 10.8787C3.75736 10 5.17157 10 8 10H16C18.8284 10 20.2426 10 21.1213 10.8787C22 11.7574 22 13.1716 22 16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16Z" stroke="#676767" stroke-width="1.5"/>
-                                <path d="M6 10V8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8V10" stroke="#676767" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M8 16H8.009M11.991 16H12M15.991 16H16" stroke="#676767" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M2 16C2 13.1716 2 11.7574 2.87868 10.8787C3.75736 10 5.17157 10 8 10H16C18.8284 10 20.2426 10 21.1213 10.8787C22 11.7574 22 13.1716 22 16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H8C5.17157 22 3.75736 22 2.87868 21.1213C2 20.2426 2 18.8284 2 16Z"
+                                    stroke="#676767" stroke-width="1.5" />
+                                <path d="M6 10V8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8V10" stroke="#676767"
+                                    stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M8 16H8.009M11.991 16H12M15.991 16H16" stroke="#676767" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <input type="password" id="password" placeholder="Password" class="w-full bg-transparent text-base text-zinc-800 outline-none dark:placeholder-[#676767]" required/>
-                        
+                        <input type="password" id="password" placeholder="Password"
+                            class="w-full bg-transparent text-base text-zinc-800 outline-none dark:placeholder-[#676767]"
+                            required />
+
                         <!-- Eye Icons -->
                         <div class="w-6 h-6 py-1 cursor-pointer" onclick="togglePassword()">
-                            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#676767" stroke-width="1.5"/>
-                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#676767" stroke-width="1.5"/>
+                            <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 hidden"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path
+                                    d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z"
+                                    stroke="#676767" stroke-width="1.5" />
+                                <path
+                                    d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                                    stroke="#676767" stroke-width="1.5" />
                             </svg>
-                            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
-                                <path d="M2 2L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M6.71277 6.7226C3.66479 8.79527 2 12 2 12C2 12 5.63636 19 12 19C14.0503 19 15.8174 18.2734 17.2711 17.2884M11 5.05822C11.3254 5.02013 11.6588 5 12 5C18.3636 5 22 12 22 12C22 12 21.3082 13.3317 20 14.8335" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14 14.2362C13.4692 14.7112 12.7684 15.0001 12 15.0001C10.3431 15.0001 9 13.657 9 12.0001C9 11.1764 9.33193 10.4303 9.86932 9.88818" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <svg id="eye-closed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500"
+                                viewBox="0 0 24 24" fill="none">
+                                <path d="M2 2L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M6.71277 6.7226C3.66479 8.79527 2 12 2 12C2 12 5.63636 19 12 19C14.0503 19 15.8174 18.2734 17.2711 17.2884M11 5.05822C11.3254 5.02013 11.6588 5 12 5C18.3636 5 22 12 22 12C22 12 21.3082 13.3317 20 14.8335"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M14 14.2362C13.4692 14.7112 12.7684 15.0001 12 15.0001C10.3431 15.0001 9 13.657 9 12.0001C9 11.1764 9.33193 10.4303 9.86932 9.88818"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- Remember Me and Login Button -->
                 <div class="flex items-center gap-2 pl-2">
                     <input type="checkbox" class="custom-checkbox">
                     <label class="text-zinc-800 text-sm dark:text-[#EFEFEF]">Remember me</label>
                 </div>
-                <button type="submit" class="w-full h-11 py-2 bg-[#6E62E5] rounded-2xl flex justify-center items-center text-white text-xl font-semibold hover:bg-[#5449C0]">Login</button>
+                <button type="submit"
+                    class="w-full h-11 py-2 bg-[#6E62E5] rounded-2xl flex justify-center items-center text-white text-xl font-semibold hover:bg-[#5449C0]">Login</button>
             </form>
-        </div>        
+        </div>
     </div>
 </body>
 
