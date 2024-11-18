@@ -19,9 +19,8 @@
                 darkMode: 'class',
                 extend: {
                     backgroundImage: {
-                        'bg-login': "url('/public/bg-login.png')",
+                        'light-login': "url('/public/bg-login.png')",
                         'dark-login': "url('/public/dark-login.png')",
-                        'dark-ilustration': "url('/public/dark-ilustration.svg')"
                     }
                 }
             }
@@ -64,22 +63,24 @@
     </style>
 </head>
 
-<body class="h-screen md:overflow-hidden lg:overflow-hidden bg-cover bg-bg-login dark:bg-dark-login">
+<body class="h-screen md:overflow-hidden lg:overflow-hidden bg-cover bg-light-login dark:bg-dark-login">
     <div class="flex flex-col lg:flex-row md:flex-col">
-        <div class="w-56 h-56 bg-sky-500/25 rounded-full absolute bottom-60 right-0 hidden lg:block"></div>
-        <div class="w-72 h-72 bg-sky-500/25 rounded-full absolute -bottom-12 right-0 hidden lg:block"></div>
+        
         <!-- Left Illustration Section (70% width) and Greeting Text -->
-        <div class="h-72 md:h-96 flex flex-col md:flex-row bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-bl-3xl rounded-br-3xl shadow-lg items-center px-8 gap-4">
+        <div class="h-72 md:h-96 lg:h-auto lg:w-7/12 flex flex-col md:flex-row lg:flex-col bg-[#6E62E5]/85 dark:bg-gray-950/90 rounded-bl-3xl rounded-br-3xl lg:rounded-bl-none lg:rounded-tr-3xl shadow-lg lg:justify-center items-center px-8 gap-4 relative">
+            <!-- Circle Ilustration -->
+            <div class="w-56 h-56 bg-sky-900/5 rounded-full absolute bottom-60 right-0 hidden lg:block"></div>
+            <div class="w-72 h-72 bg-sky-900/5 rounded-full absolute -bottom-12 right-0 hidden lg:block"></div>
             <!-- Ilustration -->
-            <div class="w-full md:w-1/2 flex justify-center">
+            <div class="w-full md:w-1/2 lg:w-96 flex justify-center">
                 <img src="/public/light-ilustration.svg" class="md:w-8/12 lg:w-full h-auto max-w-sm hidden md:block dark:hidden">
                 <img src="/public/dark-ilustration.svg" class="md:w-8/12 lg:w-full h-auto max-w-sm hidden dark:md:block">
             </div>
 
             <!-- Greeting Text -->
-            <div class="w-full md:w-1/2 flex flex-col text-left justify-center gap-4">
+            <div class="w-full md:w-1/2 lg:w-9/12 flex flex-col text-left justify-center gap-4">
                 <h1 class="text-white text-3xl font-bold leading-loose lg:leading-10">GMELS</h1>
-                <p class="text-white text-sm lg:text-base leading-relaxed">
+                <p class="text-white text-sm lg:text-base leading-relaxed lg:text-justify">
                     The cutting-edge Global Indonesia School Management and Learning System! GMELS creates a vibrant and
                     connected educational environment for the Global Indonesia School community.
                 </p>
@@ -92,7 +93,7 @@
 
 
         <!-- Right Login Section (30% width) -->
-        <div class="w-full p-8 md:p-16 flex justify-center min-h-screen lg:w-5/12">
+        <div class="w-full p-8 md:p-16 flex justify-center lg:items-center min-h-screen lg:w-5/12">
             <form action="" method="POST" class="w-full max-w-sm flex flex-col rounded-3xl p-6 gap-6">
                 <!-- Greeting Text -->
                 <div class="flex flex-col items-center text-center gap-2">
