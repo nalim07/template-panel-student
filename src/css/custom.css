@@ -258,6 +258,15 @@
     stroke: white;
 }
 
+/* Logout Icon */
+.logout-icon {
+    stroke: black;
+}
+
+.dark .logout-icon {
+    stroke: #EFEFEF;
+}
+
 /* icon svg learning data */
 .icon .icon-ld1 {
     fill: #111A26;
