@@ -13,7 +13,7 @@
     
     <script src="js/theme-setup.js" defer></script>
 
-    <style>
+    <style> 
         /* Prevent flash of unstyled content until JS has applied theme */
         html:not(.js-loaded) body {
             visibility: hidden;
@@ -26,19 +26,75 @@
 
 <body class="h-screen dark:bg-background-dark text-gray-900 dark:text-white">
     <div class="h-full flex flex-col lg:flex-row overflow-hidden">
-        <!-- Mobile Navbar -->
-        <nav id="navbar" class="navbar w-full h-16 lg:sticky bg-zinc-100 dark:bg-gray-900 top-0 lg:w-full lg:h-full flex items-center gap-4 p-4 transition-all duration-300 ease-in-out">
-            <button id="toggleSidebar" class="flex flex-col gap-2 relative px-2 items-center">
+        <!-- Mobile Display Navbar -->
+        <nav id="navbar" class="navbar w-full h-16 sticky bg-zinc-100 dark:bg-gray-900 top-0 lg:w-full lg:h-full flex items-center gap-4 p-3 transition-all duration-300 ease-in-out lg:hidden">
+            <!-- Hamburger Menu -->
+            <button id="menu-toggle" class="flex flex-col gap-2 relative px-2 items-center">
                 <svg class="w-6 h-6 stroke-current text-gray-900 dark:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12H20M4 6H20M4 18H20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <div class="flex flex-col items-center">
+
+            <!-- Logo -->
+            <div class="w-3/6 flex flex-col justify-start items-start py-3">
                 <img class="h-7" src="../public/logo-gis.png" alt="Logo GIS">
+                <p class="text text-gray-900 dark:text-white-99 text-[10px] font-medium leading-4">Senior High School</p>
             </div>
-            <div class="flex flex-col items-center">
-                <img class="w-12 h-12 rounded-full" src="../assets/img/user.png" alt="Avatar">
-            </div>
+
+            <div class="w-full flex items-center justify-end">
+                <!-- Notification -->
+                <button id="notification" class="w-10 h-10 flex flex-col gap-2 relative">
+                    <div class="absolute top-0 right-0 w-3 h-3 bg-gray-900 dark:bg-white rounded-lg flex-col justify-center">
+                        <div class="self-stretch text-center text-white dark:text-gray-900 text-[8px] font-normal leading-normal">2</div>
+                    </div>
+                    <svg class="w-6 h-6 absolute inset-0 m-auto" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Bell Icon">
+                            <path id="Vector" d="M19.2491 10.2096V9.50497C19.2491 5.63623 16.2274 2.5 12.5 2.5C8.77256 2.5 5.75087 5.63623 5.75087 9.50497V10.2096C5.75087 11.0552 5.50972 11.8818 5.0578 12.5854L3.95036 14.3095C2.93882 15.8843 3.71105 18.0249 5.47036 18.5229C10.0727 19.8257 14.9273 19.8257 19.5296 18.5229C21.289 18.0249 22.0612 15.8843 21.0496 14.3095L19.9422 12.5854C19.4903 11.8818 19.2491 11.0552 19.2491 10.2096Z" class="stroke-black dark:stroke-white" stroke-width="1.5"/>
+                            <path id="Vector_2" d="M8 19.5C8.65503 21.2478 10.4225 22.5 12.5 22.5C14.5775 22.5 16.345 21.2478 17 19.5" class="stroke-black dark:stroke-white" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                    </svg>                                                                                       
+                </button>
+
+                <!-- Theme Toggle -->
+                <div class="relative inline-block text-right">
+                    <!-- Theme Toggle Button that shows the selected icon -->
+                    <button id="theme-toggle" class="w-12 h-12 p-2 text-gray-800 dark:text-gray-200 rounded-full flex items-center justify-center">
+                        <svg id="selected-icon" class="w-6 h-6 theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <!-- Default icon for System -->
+                            <path d="M12.525 19.25C11.6212 19.25 10.7577 19.0791 9.93475 18.7375C9.1116 18.3958 8.38335 17.9083 7.75 17.275C7.11665 16.6417 6.62915 15.9134 6.2875 15.0903C5.94585 14.2673 5.775 13.4038 5.775 12.5C5.775 11.6972 5.9125 10.9298 6.1875 10.198C6.4625 9.466 6.85 8.8 7.35 8.2C7.5 8.01665 7.7 7.95 7.95 8C8.2 8.05 8.36665 8.2 8.45 8.45C8.8 9.38335 9.24585 10.2625 9.7875 11.0875C10.3292 11.9125 10.95 12.675 11.65 13.375C12.35 14.075 13.1125 14.6959 13.9375 15.2375C14.7625 15.7792 15.6417 16.225 16.575 16.575C16.8083 16.6583 16.9541 16.8209 17.0125 17.0625C17.0709 17.3041 17.0084 17.5084 16.825 17.675C16.2265 18.1922 15.561 18.5839 14.8285 18.8503C14.0961 19.1168 13.3284 19.25 12.525 19.25ZM17.775 15.375C17.5884 15.3148 17.4541 15.1914 17.3725 15.0048C17.2908 14.8183 17.2917 14.6333 17.375 14.45C17.7584 13.4833 17.85 12.4833 17.65 11.45C17.45 10.4166 16.975 9.525 16.225 8.775C15.4916 8.04165 14.6375 7.57085 13.6625 7.3625C12.6875 7.15415 11.725 7.21665 10.775 7.55C10.575 7.63335 10.3743 7.6361 10.173 7.55825C9.9715 7.4806 9.8305 7.35285 9.75 7.175C9.65 6.98365 9.6375 6.79835 9.7125 6.619C9.7875 6.43965 9.91665 6.30835 10.1 6.225C11.35 5.74165 12.6166 5.625 13.9 5.875C15.1833 6.125 16.3172 6.74225 17.3018 7.72675C18.2673 8.69225 18.8834 9.81665 19.15 11.1C19.4167 12.3834 19.3083 13.65 18.825 14.9C18.7416 15.1166 18.6016 15.2708 18.4047 15.3625C18.2079 15.4541 17.998 15.4583 17.775 15.375ZM12.4955 3.5C12.2818 3.5 12.1041 3.42809 11.9625 3.28425C11.8208 3.14058 11.75 2.9625 11.75 2.75V1.25C11.75 1.0375 11.8223 0.859333 11.967 0.7155C12.1115 0.571833 12.2907 0.5 12.5045 0.5C12.7182 0.5 12.8959 0.571833 13.0375 0.7155C13.1791 0.859333 13.25 1.0375 13.25 1.25V2.75C13.25 2.9625 13.1777 3.14058 13.033 3.28425C12.8885 3.42809 12.7093 3.5 12.4955 3.5ZM12.4955 24.5C12.2818 24.5 12.1041 24.4281 11.9625 24.2843C11.8208 24.1406 11.75 23.9625 11.75 23.75V22.25C11.75 22.0375 11.8223 21.8593 11.967 21.7155C12.1115 21.5718 12.2907 21.5 12.5045 21.5C12.7182 21.5 12.8959 21.5718 13.0375 21.7155C13.1791 21.8593 13.25 22.0375 13.25 22.25V23.75C13.25 23.9625 13.1777 24.1406 13.033 24.2843C12.8885 24.4281 12.7093 24.5 12.4955 24.5ZM18.875 6.14875C18.725 5.99775 18.65 5.8186 18.65 5.61125C18.65 5.40375 18.725 5.225 18.875 5.075L19.925 4.025C20.075 3.89166 20.25 3.82084 20.45 3.8125C20.65 3.80417 20.825 3.87175 20.975 4.01525C21.125 4.17175 21.2 4.35391 21.2 4.56175C21.2 4.76941 21.125 4.94883 20.975 5.1L19.925 6.15C19.775 6.3 19.6 6.375 19.4 6.375C19.2 6.375 19.025 6.2996 18.875 6.14875ZM4.025 20.9847C3.875 20.8282 3.8 20.6461 3.8 20.4382C3.8 20.2306 3.875 20.0512 4.025 19.9L5.075 18.85C5.225 18.7 5.4 18.625 5.6 18.625C5.8 18.625 5.975 18.7004 6.125 18.8512C6.275 19.0023 6.35 19.1814 6.35 19.3888C6.35 19.5963 6.275 19.775 6.125 19.925L5.075 20.975C4.925 21.1084 4.75 21.1791 4.55 21.1875C4.35 21.1959 4.175 21.1282 4.025 20.9847ZM22.25 13.25C22.0375 13.25 21.8594 13.1777 21.7157 13.033C21.5719 12.8885 21.5 12.7093 21.5 12.4955C21.5 12.2818 21.5719 12.1041 21.7157 11.9625C21.8594 11.8208 22.0375 11.75 22.25 11.75H23.75C23.9625 11.75 24.1406 11.8223 24.2845 11.967C24.4282 12.1115 24.5 12.2907 24.5 12.5045C24.5 12.7182 24.4282 12.8959 24.2845 13.0375C24.1406 13.1791 23.9625 13.25 23.75 13.25H22.25ZM1.25 13.25C1.0375 13.25 0.859417 13.1777 0.71575 13.033C0.571917 12.8885 0.5 12.7093 0.5 12.4955C0.5 12.2818 0.571917 12.1041 0.71575 11.9625C0.859417 11.8208 1.0375 11.75 1.25 11.75H2.75C2.9625 11.75 3.14067 11.8223 3.2845 11.967C3.42816 12.1115 3.5 12.2907 3.5 12.5045C3.5 12.7182 3.42816 12.8959 3.2845 13.0375C3.14067 13.1791 2.9625 13.25 2.75 13.25H1.25ZM20.9847 20.975C20.8282 21.125 20.6461 21.2 20.4382 21.2C20.2306 21.2 20.0512 21.125 19.9 20.975L18.85 19.925C18.7 19.775 18.625 19.6 18.625 19.4C18.625 19.2 18.7004 19.025 18.8512 18.875C19.0023 18.725 19.1814 18.65 19.3888 18.65C19.5963 18.65 19.775 18.725 19.925 18.875L20.975 19.925C21.1084 20.075 21.1791 20.25 21.1875 20.45C21.1959 20.65 21.1282 20.825 20.9847 20.975ZM6.14875 6.125C5.99775 6.275 5.8186 6.35 5.61125 6.35C5.40375 6.35 5.225 6.275 5.075 6.125L4.025 5.075C3.89166 4.925 3.82084 4.75 3.8125 4.55C3.80417 4.35 3.87175 4.175 4.01525 4.025C4.17175 3.875 4.35391 3.8 4.56175 3.8C4.76941 3.8 4.94883 3.875 5.1 4.025L6.15 5.075C6.3 5.225 6.375 5.4 6.375 5.6C6.375 5.8 6.2996 5.975 6.14875 6.125Z" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu with icons for theme options -->
+                    <div id="theme-menu" class="absolute mt-2 w-16 rounded-md hidden">
+                        <div class="flex flex-col py-2 transition-all duration-500 ease-in-out">
+                            <!-- System Theme Icon -->
+                            <button class="theme-option w-12 h-12 p-2 bg-white-99 dark:bg-gray-700 rounded-full mb-2 flex items-center justify-center shadow-md" data-theme="system">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path d="M3.5 9.5C3.5 6.67157 3.5 5.25736 4.37868 4.37868C5.25736 3.5 6.67157 3.5 9.5 3.5H15.5C18.3284 3.5 19.7426 3.5 20.6213 4.37868C21.5 5.25736 21.5 6.67157 21.5 9.5V14.5C21.5 16.3856 21.5 17.3284 20.9142 17.9142C20.3284 18.5 19.3856 18.5 17.5 18.5H7.5C5.61438 18.5 4.67157 18.5 4.08579 17.9142C3.5 17.3284 3.5 16.3856 3.5 14.5V9.5Z" stroke-opacity="0.996078" stroke-width="1.5"/>
+                                    <path opacity="0.5" d="M22.5 21.5H2.5" stroke-opacity="0.996078" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path opacity="0.5" d="M15.5 15.5H9.5" stroke-opacity="0.996078" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <!-- Light Theme Icon -->
+                            <button class="theme-option w-12 h-12 p-2 bg-white-99 dark:bg-gray-700 rounded-full mb-2 flex items-center justify-center shadow-md" data-theme="light">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                                </svg>
+                            </button>
+
+                            <!-- Dark Theme Icon -->
+                            <button class="theme-option w-12 h-12 p-2 bg-white-99 dark:bg-gray-700 rounded-full flex items-center justify-center shadow-md" data-theme="dark">
+                                <svg class="w-6 h-6 theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <path d="M21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM12 21.25C6.89137 21.25 2.75 17.1086 2.75 12H1.25C1.25 17.9371 6.06294 22.75 12 22.75V21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img class="w-9 h-9 rounded-full border-2 dark:border-ungu border-gray-900" src="../assets/img/user.png" alt="Avatar">
+            </div>   
         </nav>
 
         <!-- Sidebar -->
@@ -94,7 +150,7 @@
                                 <g id="Linear / Folders / Folder With Files">
                                     <path id="Vector" d="M18 10H13" stroke-width="1.5" stroke-linecap="round" class="group-hover:stroke-white"/>
                                     <path id="Vector_2" d="M10 3H16.5C16.9644 3 17.1966 3 17.3916 3.02567C18.7378 3.2029 19.7971 4.26222 19.9743 5.60842C20 5.80337 20 6.03558 20 6.5" stroke-width="1.5" class="group-hover:stroke-white"/>
-                                    <path id="Vector_3" d="M2 6.94975C2 6.06722 2 5.62595 2.06935 5.25839C2.37464 3.64031 3.64031 2.37464 5.25839 2.06935C5.62595 2 6.06722 2 6.94975 2C7.33642 2 7.52976 2 7.71557 2.01738C8.51665 2.09229 9.27652 2.40704 9.89594 2.92051C10.0396 3.03961 10.1763 3.17633 10.4497 3.44975L11 4C11.8158 4.81578 12.2237 5.22367 12.7121 5.49543C12.9804 5.64471 13.2651 5.7626 13.5604 5.84678C14.0979 6 14.6747 6 15.8284 6H16.2021C18.8345 6 20.1506 6 21.0062 6.76946C21.0849 6.84024 21.1598 6.91514 21.2305 6.99383C22 7.84935 22 9.16554 22 11.7979V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V6.94975Z" stroke-opacity="0.996078" stroke-width="1.5" class="group-hover:stroke-white"/>
+                                    <path id="Vector_3" d="M2 6.94975C2 6.06722 2 5.62595 2.06935 5.25839C2.37464 3.64031 3.64031 2.37464 5.25839 2.06935C5.62595 2 6.06722 2 6.94975 2C7.33642 2 7.52976 2 7.71557 2.01738C8.51665 2.09229 9.27652 2.40704 9.89594 2.92051C10.0396 3.03961 10.1763 3.17633 10.4497 3.44975L11 4C11.8158 4.81578 12.2237 5.22367 12.7121 5.49543C12.9804 5.64471 13.2651 5.7626 13.5604 5.84678C14.0979 6 14.6747 6 15.8284 6H16.2021C18.8345 6 20.1506 6 21.0062 6.76946C21.0849 6.84024 21.1598 6.91514 21.2305 6.99383C22 7.84935 22 9.16554 22 11.7979V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" stroke-opacity="0.996078" stroke-width="1.5" class="group-hover:stroke-white"/>
                                 </g>
                             </svg>
                             <span class="text text-gray-900 dark:text-white text-base font-normal leading-6 group-hover:text-white">My Class</span>
@@ -216,21 +272,21 @@
                 <!-- Content -->
                 <main class="flex-1 p-4">
                     <!-- banner -->
-                    <section class="w-full h-48 px-8 py-6 lg:flex-row dark:bg-ungu bg-white-99 rounded-2xl flex-col justify-start items-start gap-2 inline-flex relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="lg:block absolute top-0 left-0 hidden" width="77" height="70" viewBox="0 0 77 70" fill="none">
+                    <section class="w-full h-28 px-5 py-4 flex-row dark:bg-ungu bg-white-99 rounded-2xl justify-start items-start gap-2 inline-flex relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="lg:block absolute top-0 left-0 hidden" width="131" height="132" viewBox="0 0 77 70" fill="none">
                             <circle cx="35.5" cy="28.5" r="41.5" fill="white" fill-opacity="0.1"/>
                         </svg>
                         <!-- Greeting Text -->
                         <div class="lg:w-full flex flex-col gap-2">
-                            <h1 class="text-gray-900 dark:text-white text-2xl font-semibold">Welcome back, John Doe</h1>
-                            <p class="text-gray-900 dark:text-white text-sm font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <h1 class="text-gray-900 dark:text-white text-lg font-semibold">Welcome back, Savanah</h1>
+                            <p class="text-gray-900 dark:text-white text-xs font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                         </div>
                         <!-- ilustration -->
                         <div class="lg:w-1/3 lg:h-full flex-col justify-center items-center gap-2 inline-flex relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="lg:block absolute top-0 left-0 hidden" width="221" height="170" viewBox="0 0 221 170" fill="none">
-                                <circle cx="110.5" cy="110.5" r="110.5" fill="white" fill-opacity="0.1"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 -right-5" width="110" height="90" viewBox="0 0 123 108" fill="none">
+                                <ellipse cx="65.5" cy="66" rx="65.5" ry="66" fill="white" fill-opacity="0.1"/>
                             </svg>    
-                            <img class="w-full h-full" src="../public/dark-banner-ilustration.svg">
+                            <img class="w-24 h-24" src="../public/dark-banner-ilustration.svg">
                         </div>
                     </section>
 
@@ -264,8 +320,7 @@
                             </div>
                             <img class="w-7 h-7" src="../public/icons/dark/subject.svg">
                         </div>
-                    </section>
-                                        
+                    </section>               
 
                     <!-- Card, Tagihan SPP and Chart -->
                     <section class="flex flex-col lg:flex-row gap-4">
@@ -371,9 +426,9 @@
 
                 <!-- User Profile, Calendar, and Latest Information -->
                 <aside class="flex flex-col p-4 space-y-4" style="max-width: 288px;">
-                    <section class="flex flex-row items-center justify-end space-x-2">
+                    <section class="lg:flex flex-row items-center justify-end space-x-2 hidden">
                         <!-- Notification-->
-                        <div class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 rounded-full justify-center items-center relative shadow-md">
+                        <div id="notification" class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 rounded-full justify-center items-center relative shadow-md">
                             <div class="absolute top-0 right-0 w-4 h-4 bg-white rounded-lg flex-col justify-center">
                                 <div class="self-stretch text-center text-gray-900 text-xs font-normal leading-normal">2</div>
                             </div>
@@ -386,6 +441,7 @@
                                 </svg>                                                                                       
                             </button>
                         </div>
+                        
                         <!-- Theme Toggle -->
                         <div class="relative inline-block text-right">
                             <!-- Theme Toggle Button that shows the selected icon -->
@@ -424,6 +480,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- Button logout -->
                         <button class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-full shadow-md flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <svg xmlns="http://www.w3.org/2000/svg" class="logout-icon" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -482,7 +539,6 @@
         </div>
     </div>
     
-
     <!-- Script JS -->
     <script src="js/theme-toggle.js" defer></script>
     <script src="js/calendar.js"></script>
