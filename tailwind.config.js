@@ -11,6 +11,10 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      backgroundImage: {
+        'light-login': "url('/public/bg-login.png')",
+        'dark-login': "url('/public/dark-login.png')",
+      },
       colors: {
         background: {
           light: "#FFF",
@@ -18,7 +22,7 @@ module.exports = {
         },
         "stabilo": '#94FE0C',
         "navi": '#111A26',
-        "white-99": '#efefef',
+        "white-99": '#efefef', // 99% white
         "blue-link": '#16A0F9',
         "ungu": '#6E62E5',
       },
