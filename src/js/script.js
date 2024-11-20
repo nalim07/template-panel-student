@@ -44,3 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// Toggle Sliding Menu
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const menuClose = document.getElementById('menu-close');
+
+  menuToggle.addEventListener('click', () => {
+      menu.classList.add('show'); // Show the menu
+  });
+
+  menuClose.addEventListener('click', () => {
+      menu.classList.remove('show'); // Hide the menu
+  });
+
+  // Optional: Close the menu when clicking outside of it
+  menu.addEventListener('click', (event) => {
+      if (event.target === menu) {
+          menu.classList.remove('show');
+      }
+  });
+});
+

@@ -296,6 +296,23 @@
     stroke: #EFEFEF;
 }
 
+/* Icon Academic Year */
+.icon-academic-year {
+    stroke: #111A26;
+}
+
+.dark .icon-academic-year {
+    stroke: #EFEFEF;
+}
+/* Icon Term */
+.term-icon {
+    stroke: #111A26;
+}
+
+.dark .term-icon {
+    stroke: #EFEFEF;
+}
+
 /* --------------------------------- */
 
 /* Style for Tooltip */
@@ -341,3 +358,15 @@
     white-space: nowrap;
     opacity: 1;
 }
+
+/* Menu Hidden State */
+#menu {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Menu Visible State */
+#menu.show {
+    transform: translateY(0);
+}
+
