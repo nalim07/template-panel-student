@@ -211,6 +211,8 @@
   color: #484848;
 }
 
+/* --------------------------------- */
+
 /* Sidebar */
 .sidebar.collapsed {
     width: 105px;
@@ -315,6 +317,26 @@
 
 /* --------------------------------- */
 
+/* Custom Gradient Card */
+.custom-gradient {
+    background: linear-gradient(to right, #6BC4FF19, #6BC4FF66);
+}
+
+.dark .custom-gradient {
+    background: linear-gradient(113deg, rgba(255, 255, 255, 0.51) 3.51%, rgba(255, 255, 255, 0.00) 111.71%);
+}
+
+/* Icon Passpay */
+.icon-passpay {
+    stroke: #17A1FA;
+}
+
+.dark .icon-passpay {
+    stroke: #EFEFEF;
+}
+
+/* --------------------------------- */
+
 /* Style for Tooltip */
 [data-tooltip] {
     position: relative;
@@ -368,5 +390,9 @@
 /* Menu Visible State */
 #menu.show {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
 }
 

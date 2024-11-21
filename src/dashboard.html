@@ -14,7 +14,7 @@
     <script src="js/theme-setup.js" defer></script>
 
     <style> 
-        /* Prevent flash of unstyled content until JS has applied theme */
+        /* Mencegah konten flicker ketika memuat halaman di mode gelap */
         html:not(.js-loaded) body {
             visibility: hidden;
         }
@@ -182,7 +182,7 @@
                                     <path id="Vector_4" d="M13 2.5V5C13 7.35702 13 8.53553 13.7322 9.26777C14.4645 10 15.643 10 18 10H22" stroke-opacity="0.996078" stroke-width="1.5" class="group-hover:stroke-white"/>
                                 </g>
                             </svg>
-                            <span class="text-center text-base font-normal">Semester Report</span>
+                            <span class="text-center text-base font-normal">Semester</span>
                         </a>
                     </li>
                     <!-- P5 Report -->
@@ -243,7 +243,7 @@
                                     <path id="Vector_4" d="M7.5 8.5H16.5" stroke-opacity="0.996078" stroke-width="1.5" stroke-linecap="round" class="group-hover:stroke-white"/>
                                 </g>
                             </svg> 
-                            <span class="text-center text-base font-normal leading-6">Payment History</span>
+                            <span class="text-center text-base font-normal leading-6">History</span>
                         </a>
                     </li>
                 </ul>
@@ -444,9 +444,9 @@
                     </section>
 
                     <!-- Overview Cards -->
-                    <section class="w-full my-8 flex flex-wrap gap-4">
+                    <section class="w-full my-8 flex flex-wrap md:flex-row lg:flex-row gap-4 md:gap-4 lg:gap-8 md:justify-between lg:justify-between">
                         <!-- School Year Card -->
-                        <div class="w-[calc(50%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(25%-1rem)] h-20 px-6 py-4 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[148px] h-20 px-6 py-4 md:px-3 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
                             <div class="flex flex-col">
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-sm font-normal leading-snug">School Year</p>
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-xs font-normal">2024/2025</p>
@@ -458,7 +458,7 @@
                             </svg>
                         </div>
                         <!-- Term Card -->
-                        <div class="w-[calc(50%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(25%-1rem)] h-20 px-6 py-4 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[148px] h-20 px-6 py-4 md:px-3 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
                             <div class="flex flex-col">
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-sm font-normal leading-snug">Term</p>
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-xs font-normal">2/4</p>
@@ -473,7 +473,7 @@
                             </svg>                            
                         </div>
                         <!-- Semester Card -->
-                        <div class="w-[calc(50%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(25%-1rem)] h-20 px-6 py-4 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[148px] h-20 px-6 py-4 md:px-3 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
                             <div class="flex flex-col">
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-sm font-normal leading-snug">Semester</p>
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-xs font-normal">1/2</p>
@@ -484,7 +484,7 @@
                             </svg>                            
                         </div>
                         <!-- Subject Card -->
-                        <div class="w-[calc(50%-0.5rem)] md:w-[calc(25%-1rem)] lg:w-[calc(25%-1rem)] h-20 px-6 py-4 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
+                        <div class="w-[calc(50%-0.5rem)] md:w-[148px] h-20 px-6 py-4 md:px-3 bg-[#efefef] dark:bg-ungu rounded-2xl shadow-md flex justify-between items-center">
                             <div class="flex flex-col">
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-sm font-normal leading-snug">Subject</p>
                                 <p class="py-1 text-gray-900 dark:text-white-99 text-xs font-normal">12</p>
@@ -501,7 +501,7 @@
                     </section>                                   
 
                     <!-- Card, Tagihan SPP and Chart -->
-                    <section class="flex flex-col lg:flex-row gap-4">
+                    <section class="flex flex-col md:flex-row lg:flex-row gap-4">
                         <!-- Card, SPP -->
                         <div class="relative w-full h-48 bg-gradient-to-b dark:bg-gradient-to-br shadow-md rounded-2xl overflow-hidden backdrop-blur-lg border-white">
                             <div class="absolute inset-0 bg-gray-200 dark:bg-gray-900"></div>
@@ -522,12 +522,12 @@
                               </div>
                             </div>
                           
-                            <div class="absolute h-full w-1/4 flex flex-col bg-gradient-to-b from-[#6BC4FF19] to-[#6BC4FF66] right-0">
+                            <div class="absolute h-full w-1/4 flex flex-col custom-gradient right-0">
                               <div class="flex flex-col h-full py-6 justify-between items-center">
                                 <!-- icon Passpay -->
                                 <div class="relative w-5 h-6">
-                                  <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.143 1.28564C17.0237 4.5432 18.0139 8.23843 18.0139 11.9999C18.0139 15.7614 17.0237 19.4567 15.143 22.7142M10.4287 3.64279C11.8957 6.18368 12.668 9.06596 12.668 11.9999C12.668 14.9339 11.8957 17.8162 10.4287 20.3571M5.92871 5.80707C6.98945 7.66388 7.54789 9.77016 7.54789 11.9142C7.54789 14.0583 6.98945 16.1646 5.92871 18.0214M1.42871 8.14279C2.19318 9.29976 2.59847 10.6362 2.59847 11.9999C2.59847 13.3637 2.19318 14.7001 1.42871 15.8571" stroke="#17A1FA" stroke-width="2.57143" stroke-linecap="round"/>
+                                  <svg width="20" height="24" class="icon-passpay" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.143 1.28564C17.0237 4.5432 18.0139 8.23843 18.0139 11.9999C18.0139 15.7614 17.0237 19.4567 15.143 22.7142M10.4287 3.64279C11.8957 6.18368 12.668 9.06596 12.668 11.9999C12.668 14.9339 11.8957 17.8162 10.4287 20.3571M5.92871 5.80707C6.98945 7.66388 7.54789 9.77016 7.54789 11.9142C7.54789 14.0583 6.98945 16.1646 5.92871 18.0214M1.42871 8.14279C2.19318 9.29976 2.59847 10.6362 2.59847 11.9999C2.59847 13.3637 2.19318 14.7001 1.42871 15.8571" stroke-width="2.57143" stroke-linecap="round"/>
                                   </svg>
                                 </div>
                                 <!-- icon Mastercard -->
@@ -551,60 +551,64 @@
                     <!-- Lesson Timetable -->
                     <section class="mt-6 bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl shadow-md">
                         <h3 class="font-semibold text-lg mb-4">Lesson Timetable</h3>
-                        <table class="w-full text-sm">
-                            <thead>
-                                <tr>
-                                    <th class="py-2">Time</th>
-                                    <th class="py-2">Monday</th>
-                                    <th class="py-2">Tuesday</th>
-                                    <th class="py-2">Wednesday</th>
-                                    <th class="py-2">Thursday</th>
-                                    <th class="py-2">Friday</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b dark:border-white">
-                                    <td class="py-2 text-center">07:30</td>
-                                    <td class="py-2 text-center">Informatics</td>
-                                    <td class="py-2 text-center">Music</td>
-                                    <td class="py-2 text-center">Mathematics</td>
-                                    <td class="py-2 text-center">Religion</td>
-                                    <td class="py-2 text-center">PE</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="flex justify-between mb-4">
+                            <button id="prevDay" class="bg-gray-300 dark:bg-gray-700 p-2 rounded">Prev</button>
+                            <span id="currentDay" class="text-lg font-medium">Monday</span>
+                            <button id="nextDay" class="bg-gray-300 dark:bg-gray-700 p-2 rounded">Next</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2">Time</th>
+                                        <th class="py-2">Subject</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="timetableBody">
+                                    <!-- Content will be dynamically updated -->
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
 
                     <!-- Latest Information Section -->
-                    <section class="h-64 px-6 py-4 mt-6 bg-[#efefef] dark:bg-gray-900 rounded-3xl flex-col justify-start items-start gap-6 inline-flex shadow-md">
-                        <div class="self-stretch mt-4 justify-start items-center gap-2 inline-flex">
-                            <div class="text-center text-base font-medium">Latest Information</div>
-                        </div>
-                        <hr class="w-full border-3 border-gray-900 dark:border-green-50">
-                        <div class="flex items-center gap-4">
-                            <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center flex-shrink-0">
-                                <img class="w-16 h-16" src="../public/icons/dark/user-profile-icon.svg" loading="lazy">
-                            </div>
-                            <div class="flex-1 flex flex-col justify-center gap-1">
-                                <div class="text-left text-base font-medium">Pembagian Rapot</div>
-                                <div class="flex gap-1 flex-wrap">
-                                    <p id="textContent" class="font-normal text-sm whitespace-wrap">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
-                                        dolor sit amet, consectetur adipisicing elit. Distinctio accusantium in numquam hic
-                                        magnam illum quasi deserunt at! Est inventore magni nobis ut excepturi ducimus vero esse
-                                        accusamus facere! Minima!
-                                    </p>
-                                    <!-- <a href="full-article.html" id="moreLink" class="text-sky-500 font-normal" style="display: none;">more</a> -->
+                    <section class="h-auto px-4 py-4 mt-6 bg-[#efefef] dark:bg-gray-900 rounded-3xl flex flex-col md:flex justify-start items-start gap-4 md:gap-4 shadow-md">
+                        <div class="px-4 py-2 text-center text-base font-medium">Latest Information</div>
+                        <hr class="w-48 border-3 border-gray-900 dark:border-green-50">
+                        <div class="flex-col md:flex md:flex-row md:gap-4">
+                            <div class="flex items-center p-2 gap-3">
+                                <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center flex-shrink-0">
+                                    <img class="w-16 h-16" src="../public/icons/dark/user-profile-icon.svg" loading="lazy">
                                 </div>
-                                <div class="text-xs font-normal">3 Oktober 2024</div>
+                                <div class="flex-1 flex flex-col justify-center gap-1">
+                                    <div class="text-left text-base font-medium">Pembagian Rapot</div>
+                                    <div class="text-sm font-normal text-gray-300">
+                                        <span id="textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, maiores.</span>
+                                        <a href="full-article.html" id="moreLink" class="text-sky-500 font-normal" style="display: none;">[more]</a>
+                                    </div>
+                                    <div class="text-[10px] font-normal">3 Oktober 2024</div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="flex items-center p-2 gap-3">
+                                <div class="w-16 h-16 bg-white rounded-xl flex justify-center items-center flex-shrink-0">
+                                    <img class="w-16 h-16" src="../public/icons/dark/user-profile-icon.svg" loading="lazy">
+                                </div>
+                                <div class="flex-1 flex flex-col justify-center gap-1">
+                                    <div class="text-left text-base font-medium">Pembagian Rapot</div>
+                                    <div class="text-sm font-normal text-gray-300">
+                                        <span id="textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, maiores.</span>
+                                        <a href="full-article.html" id="moreLink" class="text-sky-500 font-normal" style="display: none;">[more]</a>
+                                    </div>
+                                    <div class="text-[10px] font-normal">3 Oktober 2024</div>
+                                </div>
+                            </div>
+                        </div>                                                
                     </section>
                 </main>
 
                 <!-- User Profile, Calendar, and Latest Information -->
-                <aside class="flex flex-col p-4 space-y-4" style="max-width: 288px;">
-                    <section class="lg:flex flex-row items-center justify-end space-x-2 hidden">
+                <aside class="md:w-full lg:max-w-[288px] lg:h-full flex flex-col p-4 space-y-4">
+                    <section class="lg:flex lg:flex-row lg:items-center lg:justify-end lg:space-x-2 hidden">
                         <!-- Notification-->
                         <div id="notification" class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 rounded-full justify-center items-center relative shadow-md">
                             <div class="absolute top-0 right-0 w-4 h-4 bg-white rounded-lg flex-col justify-center">
@@ -669,7 +673,7 @@
                     </section>
 
                     <!-- User Profile Section -->
-                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl flex flex-col items-center shadow-md">
+                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl lg:flex lg:flex-col lg:items-center shadow-md hidden">
                         <div class="flex flex-col items-center">
                             <img class="w-24 h-24 rounded-full border-4 dark:border-ungu border-gray-900" src="../assets/img/user.png" alt="User Profile">
                             <p class="text-center py-4">
@@ -686,32 +690,41 @@
                                     <img src="../public/icons/dark/group-icon.svg" alt="Group Icon">
                                 </button>
                                 <button class="w-12 h-12 p-2 dark:bg-ungu bg-[#efefef] rounded-2xl flex justify-center items-center shadow-sm shadow-gray-800">
-                                    <img src="../public/icons/dark/term-Icon.svg" alt="Term Icon">
+                                    <svg class="w-7 h-7 term-icon" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Money Icon">
+                                            <path id="Vector" d="M22.6979 26.2503C23.4999 25.5374 24.7084 25.5374 25.5104 26.2503C26.0553 26.7345 26.9166 26.3478 26.9166 25.6188V4.38149C26.9166 3.65245 26.0553 3.26564 25.5104 3.74999C24.7084 4.46286 23.4999 4.46286 22.6979 3.74999C21.8959 3.03711 20.6874 3.03711 19.8854 3.74999C19.0834 4.46286 17.8749 4.46286 17.0729 3.74999C16.2709 3.03711 15.0624 3.03711 14.2604 3.74999C13.4584 4.46286 12.2499 4.46286 11.4479 3.74999C10.6459 3.03711 9.43736 3.03711 8.63538 3.74999C7.83339 4.46286 6.62486 4.46286 5.82288 3.74999C5.27799 3.26564 4.41663 3.65245 4.41663 4.38149V25.6188C4.41663 26.3478 5.27799 26.7345 5.82288 26.2503C6.62486 25.5374 7.83339 25.5374 8.63538 26.2503C9.43736 26.9631 10.6459 26.9631 11.4479 26.2503C12.2499 25.5374 13.4584 25.5374 14.2604 26.2503C15.0624 26.9631 16.2709 26.9631 17.0729 26.2503C17.8749 25.5374 19.0834 25.5374 19.8854 26.2503C20.6874 26.9631 21.8959 26.9631 22.6979 26.2503Z" stroke-width="1.5"/>
+                                            <path id="Vector_2" d="M10.0416 19.375H21.2916" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path id="Vector_3" d="M10.0416 15H21.2916" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path id="Vector_4" d="M10.0416 10.625H21.2916" stroke-width="1.5" stroke-linecap="round"/>
+                                        </g>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Calendar Section -->
-                    <section class="h-72 bg-white-99 dark:bg-gray-900 rounded-2xl shadow-md">
-                        <div class="calendar"></div>
-                    </section>
-
-                    <!-- EduHybrid Section -->
-                    <section class="w-full h-56 bg-[#efefef] dark:bg-gray-900 rounded-3xl justify-start items-center gap-4 inline-flex shadow-md">
-                        <img class=" w-28 h-36 px-1" src="../assets/img/eduhybrid.png" />
-                        <div class="flex-col justify-start items-start gap-2 inline-flex">
-                            <div class="h-36 flex-col justify-start items-start gap-2 flex">
-                                <div class="self-stretch pt-2 text-sm font-medium leading-normal">EduHybrid</div>
-                                <div class="self-stretch text-xs font-normal leading-none">Enhance your learning
-                                    experience with our interactive educational platform. Access a wide range of courses and
-                                    resources to help you succeed in your educational journey.</div>
+                    <div class="flex flex-col md:flex-row lg:flex-col md:justify-between gap-4">
+                        <!-- Calendar Section -->
+                        <section class="h-72 bg-white-99 dark:bg-gray-900 rounded-2xl shadow-md flex-1">
+                            <div class="calendar"></div>
+                        </section>
+                    
+                        <!-- EduHybrid Section -->
+                        <section class="w-full h-56 md:w-80 md:h-72 lg:w-full lg:h-full bg-[#efefef] dark:bg-gray-900 rounded-3xl shadow-md flex justify-start items-center gap-4 p-4">
+                            <img class="w-28 h-36 px-1" src="../assets/img/eduhybrid.png" alt="EduHybrid Image"/>
+                            <div class="flex flex-col justify-start items-start gap-2">
+                                <div class="flex flex-col justify-start items-start gap-2">
+                                    <div class="text-sm font-medium leading-normal">EduHybrid</div>
+                                    <div class="text-xs font-normal leading-none">
+                                        Enhance your learning experience with our interactive educational platform. Access a wide range of courses and resources to help you succeed in your educational journey.
+                                    </div>
+                                </div>
+                                <div class="w-20 h-5 lg:w-28 lg:h-6 dark:bg-ungu bg-gray-900 rounded-2xl flex justify-center items-center">
+                                    <a href="#" class="text-center text-white text-xs font-normal leading-none">Learn More</a>
+                                </div>
                             </div>
-                            <div class="w-20 h-5 p-1 dark:bg-ungu bg-gray-900 rounded-2xl justify-center items-center inline-flex">
-                                <a href="#" class="text-center text-white text-xs font-normal leading-none">Learn More</a>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </aside>
             </div>
         </div>
