@@ -91,8 +91,10 @@
 }
 
 .calendar .calendar-inner .calendar-controls {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; /* Ubah ke flexbox */
+    justify-content: space-between; /* Sebarkan elemen */
+    align-items: center; /* Rata tengah secara vertikal */
+    margin-bottom: 10px;
 }
 
 .calendar .calendar-inner .calendar-today-date {
@@ -110,14 +112,16 @@
 }
 
 .dark .calendar .calendar-inner .calendar-today-date {
-    background: black;
+    background: #6E62E5;
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-year-month {
     display: flex;
     min-width: auto;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    flex-grow: 1;
     margin-bottom: 10px;
 }
 
@@ -147,7 +151,7 @@
 }
 
 .dark .calendar .calendar-inner .calendar-body .calendar-today {
-    background: black; 
+    background: #6E62E5; 
 }
 
 .calendar .calendar-inner .calendar-body .calendar-today:hover {
@@ -211,6 +215,104 @@
   color: #484848;
 }
 
+/* Media Query untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .calendar {
+        width: 90%; /* Gunakan persentase agar fleksibel */
+        height: auto; /* Sesuaikan tinggi otomatis */
+        margin: 10px auto;
+        border-radius: 10px; /* Perkecil radius jika diperlukan */
+    }
+
+    .calendar .calendar-inner {
+        padding: 10px; /* Tambahkan ruang yang lebih fleksibel */
+    }
+
+    .calendar .calendar-inner .calendar-controls {
+        display: flex; /* Ubah ke flexbox */
+        justify-content: space-between; /* Sebarkan elemen */
+        align-items: center; /* Rata tengah secara vertikal */
+        margin-bottom: 10px;
+    }
+    
+    .calendar .calendar-inner .calendar-controls .calendar-year-month {
+        display: flex;
+        align-items: center; /* Tengah secara vertikal */
+        justify-content: center; /* Pusatkan secara horizontal */
+        gap: 10px; /* Beri jarak antar elemen */
+        flex-grow: 1; /* Biarkan label memakan ruang di antara prev dan next */
+        margin-bottom: 0;
+    }
+    
+    .calendar .calendar-inner .calendar-controls .calendar-prev,
+    .calendar .calendar-inner .calendar-controls .calendar-next {
+        display: flex;
+        align-items: center; /* Tengahkan tombol secara vertikal */
+    }
+    
+    .calendar .calendar-inner .calendar-controls .calendar-prev a,
+    .calendar .calendar-inner .calendar-controls .calendar-next a {
+        padding: 5px 10px; /* Tambahkan padding tombol */
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-flex; /* Supaya ikon tetap inline */
+        align-items: center;
+        justify-content: center;
+        background: var(--calendar-nextprev-bg-color);
+        border-radius: 5px;
+        color: #a1a1aa;
+    }
+    
+    .calendar .calendar-inner .calendar-controls .calendar-prev a svg,
+    .calendar .calendar-inner .calendar-controls .calendar-next a svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 5px; /* Tambahkan margin pada ikon */
+    }
+    
+
+    .calendar .calendar-inner .calendar-body {
+        gap: 1px; /* Kurangi jarak antar kotak */
+        grid-template-columns: repeat(7, 1fr); /* Tetap 7 kolom */
+    }
+
+    .calendar .calendar-inner .calendar-body div {
+        padding: 5px; /* Kurangi padding */
+        min-height: 30px; /* Sesuaikan tinggi */
+        font-size: 0.7rem; /* Perkecil ukuran font */
+    }
+
+    .calendar .calendar-inner .calendar-body div>a {
+        font-size: 0.7rem; /* Perkecil link */
+    }
+
+    .calendar .calendar-inner .calendar-today-date {
+        width: 70%; /* Lebar lebih fleksibel */
+        padding: 8px 0; /* Tambahkan ruang */
+        font-size: 1rem;
+    }
+}
+
+/* Media Query untuk layar yang sangat kecil (misalnya, ponsel lama) */
+@media screen and (max-width: 480px) {
+    .calendar {
+        font-size: 0.8rem; /* Perkecil semua ukuran font */
+    }
+
+    .calendar .calendar-inner .calendar-body div {
+        padding: 3px; /* Kurangi padding lebih lanjut */
+        min-height: 25px; /* Kurangi tinggi minimum */
+    }
+
+    .calendar .calendar-inner .calendar-body div>a {
+        font-size: 0.5rem; /* Perkecil lebih lanjut */
+    }
+
+    .calendar .calendar-inner .calendar-today-date {
+        font-size: 0.7rem; /* Sesuaikan ukuran font */
+    }
+}
+
 /* --------------------------------- */
 
 /* Sidebar */
@@ -233,12 +335,6 @@
 
 .rotate-180 {
     transform: rotate(180deg);
-}
-
-/* Tooltip */
-.tooltip-container {
-    position: relative;
-    display: inline-block;
 }
 
 /* Icon svg */
@@ -312,6 +408,24 @@
 }
 
 .dark .term-icon {
+    stroke: #EFEFEF;
+}
+
+/* Icon User */
+.icon-user {
+    stroke: #111A26;
+}
+
+.dark .icon-user {
+    stroke: #EFEFEF;
+}
+
+/* Icon Group */
+.group-icon {
+    stroke: #111A26;
+}
+
+.dark .group-icon {
     stroke: #EFEFEF;
 }
 
@@ -394,5 +508,4 @@
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-}
-
+}  

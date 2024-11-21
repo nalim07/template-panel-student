@@ -426,7 +426,7 @@
                 <main class="flex-1 p-4">
                     <!-- banner -->
                     <section class="w-full h-28 px-5 py-4 flex-row dark:bg-ungu bg-white-99 rounded-2xl justify-start items-start gap-2 inline-flex relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="lg:block absolute top-0 left-0 hidden" width="131" height="132" viewBox="0 0 77 70" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="lg:w-1/2 lg:h-1/2 lg:block absolute top-0 lg:-left-[139px] hidden" viewBox="0 0 77 70" fill="none">
                             <circle cx="35.5" cy="28.5" r="41.5" fill="white" fill-opacity="0.1"/>
                         </svg>
                         <!-- Greeting Text -->
@@ -607,7 +607,7 @@
                 </main>
 
                 <!-- User Profile, Calendar, and Latest Information -->
-                <aside class="md:w-full lg:max-w-[288px] lg:h-full flex flex-col p-4 space-y-4">
+                <aside class="md:w-full lg:max-w-[288px] lg:h-full flex flex-col px-4 py-2 lg:p-4 lg:space-y-4">
                     <section class="lg:flex lg:flex-row lg:items-center lg:justify-end lg:space-x-2 hidden">
                         <!-- Notification-->
                         <div id="notification" class="w-12 h-12 p-2 bg-white-99 dark:bg-gray-900 rounded-full justify-center items-center relative shadow-md">
@@ -673,7 +673,7 @@
                     </section>
 
                     <!-- User Profile Section -->
-                    <section class="bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl lg:flex lg:flex-col lg:items-center shadow-md hidden">
+                    <section class="lg:mb-6 bg-[#efefef] dark:bg-gray-900 p-6 rounded-2xl lg:flex lg:flex-col lg:items-center shadow-md hidden">
                         <div class="flex flex-col items-center">
                             <img class="w-24 h-24 rounded-full border-4 dark:border-ungu border-gray-900" src="../assets/img/user.png" alt="User Profile">
                             <p class="text-center py-4">
@@ -684,10 +684,23 @@
                             <hr class="w-full mb-4 border-3 dark:border-green-50 border-gray-900">
                             <div class="flex space-x-4">
                                 <button class="w-12 h-12 p-2 dark:bg-ungu bg-[#efefef] rounded-2xl flex justify-center items-center shadow-sm shadow-gray-800">
-                                    <img src="../public/icons/dark/user-profile-icon.svg" alt="Profile Icon">
+                                    <svg width="25" height="25" class="icon-user" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="User Profile Icon">
+                                            <path id="Vector" d="M18.387 20.5844C18.0691 18.174 16.8881 16.5 12.5 16.5C8.11186 16.5 6.93082 18.174 6.61295 20.5843M18.387 20.5844C20.88 18.7659 22.5 15.8221 22.5 12.5C22.5 6.97715 18.0228 2.5 12.5 2.5C6.97715 2.5 2.5 6.97715 2.5 12.5C2.5 15.8221 4.11992 18.7658 6.61295 20.5843M18.387 20.5844C16.7354 21.7891 14.7007 22.5 12.5 22.5C10.2992 22.5 8.2645 21.7891 6.61295 20.5843M15.5 10.5C15.5 12.1569 14.1569 13.5 12.5 13.5C10.8431 13.5 9.5 12.1569 9.5 10.5C9.5 8.84315 10.8431 7.5 12.5 7.5C14.1569 7.5 15.5 8.84315 15.5 10.5Z"  stroke-width="1.5" stroke-linecap="round"/>
+                                        </g>
+                                    </svg>
                                 </button>
                                 <button class="w-12 h-12 p-2 dark:bg-ungu bg-[#efefef] rounded-2xl flex justify-center items-center shadow-sm shadow-gray-800">
-                                    <img src="../public/icons/dark/group-icon.svg" alt="Group Icon">
+                                    <svg width="25" height="25" class="group-icon" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Group Icon">
+                                            <path id="Vector" d="M12.5 10.5C14.7091 10.5 16.5 8.70914 16.5 6.5C16.5 4.29086 14.7091 2.5 12.5 2.5C10.2909 2.5 8.5 4.29086 8.5 6.5C8.5 8.70914 10.2909 10.5 12.5 10.5Z" stroke-width="1.5"/>
+                                            <path id="Vector_2" d="M18.5 9.5C20.1569 9.5 21.5 8.38071 21.5 7C21.5 5.61929 20.1569 4.5 18.5 4.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path id="Vector_3" d="M6.5 9.5C4.84315 9.5 3.5 8.38071 3.5 7C3.5 5.61929 4.84315 4.5 6.5 4.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path id="Vector_4" d="M12.5 21.5C15.8137 21.5 18.5 19.7091 18.5 17.5C18.5 15.2909 15.8137 13.5 12.5 13.5C9.18629 13.5 6.5 15.2909 6.5 17.5C6.5 19.7091 9.18629 21.5 12.5 21.5Z" stroke-width="1.5"/>
+                                            <path id="Vector_5" d="M20.5 19.5C22.2542 19.1153 23.5 18.1411 23.5 17C23.5 15.8589 22.2542 14.8847 20.5 14.5" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path id="Vector_6" d="M4.5 19.5C2.74575 19.1153 1.5 18.1411 1.5 17C1.5 15.8589 2.74575 14.8847 4.5 14.5" stroke-width="1.5" stroke-linecap="round"/>
+                                        </g>
+                                    </svg>                                    
                                 </button>
                                 <button class="w-12 h-12 p-2 dark:bg-ungu bg-[#efefef] rounded-2xl flex justify-center items-center shadow-sm shadow-gray-800">
                                     <svg class="w-7 h-7 term-icon" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -705,12 +718,12 @@
 
                     <div class="flex flex-col md:flex-row lg:flex-col md:justify-between gap-4">
                         <!-- Calendar Section -->
-                        <section class="h-72 bg-white-99 dark:bg-gray-900 rounded-2xl shadow-md flex-1">
+                        <section class="flex h-auto py-4 bg-white-99 dark:bg-gray-900 rounded-2xl shadow-md">
                             <div class="calendar"></div>
                         </section>
                     
                         <!-- EduHybrid Section -->
-                        <section class="w-full h-56 md:w-80 md:h-72 lg:w-full lg:h-full bg-[#efefef] dark:bg-gray-900 rounded-3xl shadow-md flex justify-start items-center gap-4 p-4">
+                        <section class="w-full h-56 mt-2 md:w-80 md:h-72 lg:w-full lg:h-full bg-[#efefef] dark:bg-gray-900 rounded-3xl shadow-md flex justify-start items-center gap-4 p-4">
                             <img class="w-28 h-36 px-1" src="../assets/img/eduhybrid.png" alt="EduHybrid Image"/>
                             <div class="flex flex-col justify-start items-start gap-2">
                                 <div class="flex flex-col justify-start items-start gap-2">
@@ -719,9 +732,7 @@
                                         Enhance your learning experience with our interactive educational platform. Access a wide range of courses and resources to help you succeed in your educational journey.
                                     </div>
                                 </div>
-                                <div class="w-20 h-5 lg:w-28 lg:h-6 dark:bg-ungu bg-gray-900 rounded-2xl flex justify-center items-center">
-                                    <a href="#" class="text-center text-white text-xs font-normal leading-none">Learn More</a>
-                                </div>
+                                <a href="https://eduhybrid.id/" class="w-20 h-5 py-3 mt-2 lg:w-24 lg:h-4 dark:bg-ungu bg-gray-900 rounded-2xl flex justify-center items-center text-center text-white text-xs font-normal leading-none">Learn More</a>
                             </div>
                         </section>
                     </div>
