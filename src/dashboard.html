@@ -19,9 +19,6 @@
             visibility: hidden;
         }
     </style>
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body class="h-screen dark:bg-background-dark text-gray-900 dark:text-white">
@@ -543,8 +540,8 @@
                         </div>
                           
                         <!-- Chart -->
-                        <div class="w-full h-48 bg-[#efefef] dark:bg-gray-900 rounded-2xl shadow-md backdrop-blur-lg">
-                            <div id="termChart" class="w-full h-full"></div>
+                        <div class="w-full h-auto py-4 bg-[#efefef] dark:bg-gray-900 rounded-2xl shadow-md backdrop-blur-lg">
+                            <div id="labels-chart" class="px-2.5"></div>
                         </div>
                     </section>
 
@@ -746,6 +743,9 @@
     <script src="js/calendar.js"></script>
     <script src="js/script.js"></script>
     <script src="js/chart.js"></script>
+
+    <!-- Flowbite JS -->
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
