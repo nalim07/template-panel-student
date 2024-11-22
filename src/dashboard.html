@@ -104,18 +104,18 @@
         </nav>
 
         <!-- Sliding Menu -->
-        <div id="menu" class="fixed inset-0 bg-gray-900 bg-opacity-75 transform translate-y-full transition-transform duration-300 z-50">
-            <div class="bg-white dark:bg-gray-800  h-full p-6" style="border-radius: 64px 64px 0px 0px;">
-                <button id="menu-close" class="absolute right-12 top-6 text-gray-900 dark:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <div id="menu" class="fixed inset-0 bg-gray-900 bg-opacity-75 transform translate-y-full md:translate-y-full transition-transform duration-300 z-50">
+            <div id="menu-content" class="bg-white dark:bg-gray-800 h-full p-6 border-radius md:w-64">
+                <button id="menu-close" class="absolute right-12 top-6 md:left-52 md:top-6 text-gray-900 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 16 16" fill="none">
                         <path d="M1 1L15.1421 15.1421" stroke="#EFEFEF" stroke-opacity="0.996078" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M1 15.1426L15.1421 1.00044" stroke="#EFEFEF" stroke-opacity="0.996078" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <ul class="mt-12 text-gray-900 dark:text-white grid grid-cols-3 gap-4">
+                <ul class="mt-12 text-gray-900 dark:text-white grid grid-cols-3 gap-4 md:flex md:flex-col md:gap-0">
                     <!-- Dashboard -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Linear / Essentional, UI / Home Smile">
                                     <path id="Vector"
@@ -130,18 +130,18 @@
                         </a>
                     </li>                    
                     <!-- Learning -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon w-8 h-8" viewBox="0 0 24 24" fill="none">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start md:py-8">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon w-8 h-8 md:w-8 md:h-8" viewBox="0 0 24 24" fill="none">
                                 <path class="icon-ld1 group-hover" d="M2.75 16.1436V4.99784H1.25V16.1436H2.75ZM22.75 16.1436V4.93324H21.25V16.1436H22.75ZM20.0559 2.26824C18.9175 2.3079 17.4296 2.42631 16.2849 2.76899L16.7151 4.20598C17.6643 3.92183 18.9892 3.80631 20.1081 3.76733L20.0559 2.26824ZM16.2849 2.76899C15.2899 3.06688 14.1706 3.64872 13.2982 4.15367L14.0495 5.45192C14.9 4.95973 15.8949 4.45153 16.7151 4.20598L16.2849 2.76899ZM3.93639 3.82352C4.90238 3.88289 5.99643 3.99834 6.80864 4.21266L7.19136 2.76231C6.23055 2.50877 5.01517 2.38699 4.02841 2.32634L3.93639 3.82352ZM6.80864 4.21266C7.77076 4.46655 8.95486 5.022 9.93167 5.53852L10.6328 4.21249C9.63736 3.6861 8.32766 3.06216 7.19136 2.76231L6.80864 4.21266ZM13.9804 20.7311C14.9714 20.2028 16.1988 19.6205 17.1914 19.3586L16.8086 17.9082C15.6383 18.217 14.2827 18.8701 13.2748 19.4074L13.9804 20.7311ZM17.1914 19.3586C17.9943 19.1467 19.0732 19.0313 20.032 18.9714L19.9383 17.4743C18.9582 17.5356 17.7591 17.6574 16.8086 17.9082L17.1914 19.3586ZM10.7252 19.4074C9.71727 18.8701 8.3617 18.217 7.19136 17.9082L6.80864 19.3586C7.8012 19.6205 9.0286 20.2028 10.0196 20.7311L10.7252 19.4074ZM7.19136 17.9082C6.24092 17.6574 5.04176 17.5356 4.06168 17.4743L3.96804 18.9714C4.9268 19.0313 6.00566 19.1467 6.80864 19.3586L7.19136 17.9082ZM21.25 16.1436C21.25 16.8294 20.6817 17.4278 19.9383 17.4743L20.032 18.9714C21.5062 18.8792 22.75 17.6798 22.75 16.1436H21.25ZM22.75 4.93324C22.75 3.46993 21.5847 2.21499 20.0559 2.26824L20.1081 3.76733C20.7229 3.74592 21.25 4.25165 21.25 4.93324H22.75ZM1.25 16.1436C1.25 17.6798 2.49378 18.8792 3.96804 18.9714L4.06168 17.4743C3.31831 17.4278 2.75 16.8294 2.75 16.1436H1.25ZM13.2748 19.4074C12.4825 19.8298 11.5175 19.8298 10.7252 19.4074L10.0196 20.7311C11.2529 21.3885 12.7471 21.3885 13.9804 20.7311L13.2748 19.4074ZM13.2982 4.15367C12.4801 4.62713 11.4617 4.65075 10.6328 4.21249L9.93167 5.53852C11.2239 6.22181 12.791 6.18029 14.0495 5.45192L13.2982 4.15367ZM2.75 4.99784C2.75 4.30066 3.30243 3.78455 3.93639 3.82352L4.02841 2.32634C2.47017 2.23057 1.25 3.49869 1.25 4.99784H2.75Z"  fill-opacity="0.996078"/>
                                 <path d="M12 5.50098V20.501" class="icon-ld2" stroke-opacity="0.996078" stroke-width="1.5"/>
                             </svg>
-                            <span class="text text-base font-normal leading-6">Learning</span>
+                            <span class="text text-base font-normal leading-6 md:text-lg">Learning</span>
                         </a>
                     </li>
                     <!-- My Class -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 dark:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Linear / Folders / Folder With Files">
                                     <path id="Vector" d="M18 10H13" stroke-width="1.5" stroke-linecap="round" class="group-hover:stroke-white"/>
@@ -154,12 +154,12 @@
                     </li>
                 </ul>
 
-                <div class="mt-6">Reports</div>
+                <div class="mt-6 md:border-t md:border-gray-900 dark:border-white md:pt-6">Reports</div>
 
-                <ul class="mt-4 text-gray-900 dark:text-white grid grid-cols-3 gap-4">
+                <ul class="mt-4 text-gray-900 dark:text-white grid grid-cols-3 gap-4 md:grid-cols-1">
                     <!-- Leger -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white" viewBox="0 0 24 24" fill="none">
                                 <g id="Linear / Files / File Text">
                                     <path id="Vector" d="M9.5 21.7499C7.85866 21.7487 6.61664 21.7365 5.64426 21.6057C5.64424 21.6057 5.64423 21.6057 5.64421 21.6057L5.71085 21.1102L9.5 21.7499ZM9.5 21.7499V22.2499V21.7499ZM18.4224 22.1013C17.4132 22.237 16.1357 22.2489 14.5 22.2499V21.7499C16.1413 21.7487 17.3834 21.7365 18.3558 21.6057M18.4224 22.1013L18.489 22.5969M18.4224 22.1013C18.4224 22.1013 18.4224 22.1014 18.4223 22.1014L18.489 22.5969M18.4224 22.1013C19.3297 21.9793 20.0449 21.7545 20.6244 21.3315L20.2657 20.9728C19.7866 21.3019 19.1792 21.4951 18.3558 21.6057M18.489 22.5969C17.4431 22.7375 16.1303 22.749 14.5 22.7499L20.9817 21.6888C20.2991 22.2095 19.4727 22.4646 18.489 22.5969ZM18.3558 21.6057L18.2892 21.1102M18.3558 21.6057C18.3558 21.6057 18.3558 21.6057 18.3558 21.6057L18.2892 21.1102M18.2892 21.1102C19.0166 21.0124 19.5211 20.8527 19.9047 20.6118M18.2892 21.1102L19.9047 20.6118M19.9047 20.6118L19.9445 20.6516L19.9047 20.6118ZM21.6057 18.3558C21.4951 19.1792 21.3019 19.7866 20.9728 20.2657L20.6517 19.9445L20.6118 19.9047L21.7499 14.5C21.7487 16.1413 21.7365 17.3834 21.6057 18.3558ZM21.6057 18.3558C21.6057 18.3558 21.6057 18.3558 21.6057 18.3558L21.1102 18.2892L21.6057 18.3558ZM22.1014 18.4224C22.237 17.4132 22.2489 16.1357 22.2499 14.5L22.1014 18.4223C22.1014 18.4223 22.1014 18.4224 22.1014 18.4224ZM22.1014 18.4224C21.9793 19.3297 21.7545 20.0449 21.3315 20.6244L22.1014 18.4224ZM22.0508 10.5247C22.2285 11.1688 22.2477 11.9311 22.2498 13.0629H21.7496C21.7468 11.9638 21.7272 11.2807 21.5887 10.7305L22.0508 10.5247ZM19.5558 8.13717L19.8904 7.76537C20.7303 8.52399 21.2841 9.04821 21.644 9.61118L21.1818 9.81703C20.8655 9.34606 20.3709 8.87444 19.5558 8.13717ZM13.3707 2.71896L13.552 2.24668C14.0339 2.51885 14.5127 2.92831 15.1884 3.53356L14.8537 3.90537C14.2044 3.32445 13.7748 2.95864 13.3707 2.71896ZM15.5973 4.57395L15.9319 4.20229L19.1473 7.09623L18.8128 7.46787L15.5973 4.57395ZM12.6183 1.88853L12.4371 2.36083C11.9748 2.26855 11.4072 2.25307 10.5298 2.2505V1.75029C11.4429 1.75237 12.0764 1.76827 12.6183 1.88853ZM9.5298 2.25011C7.87851 2.25124 6.62903 2.2634 5.65152 2.39423C4.82398 2.50499 4.21427 2.69827 3.73442 3.02731L3.37571 2.66859C3.95613 2.24538 4.67388 2.02061 5.5852 1.89864C6.59939 1.76291 7.88417 1.75111 9.5298 1.75009V2.25011ZM1.75 13.5V10.5H2.25V13.5H1.75ZM1.7501 14.5H2.25012C2.25126 16.1413 2.26348 17.3834 2.39422 18.3558L2.88976 18.2892L2.39422 18.3558C2.50492 19.1792 2.69811 19.7866 3.02717 20.2657L2.66849 20.6244C2.24548 20.0449 2.02067 19.3297 1.89867 18.4224C1.76299 17.4132 1.75113 16.1357 1.7501 14.5ZM3.3756 21.3315L3.73428 20.9728L9.5 22.7499C7.86967 22.749 6.55695 22.7375 5.51098 22.5969L5.57763 22.1014C5.57762 22.1014 5.57761 22.1013 5.57759 22.1013C4.67021 21.9793 3.95506 21.7545 3.3756 21.3315ZM13.5 22.25H10.5V21.75H13.5V22.25ZM2.25012 9.49999H1.7501C1.75113 7.86425 1.76299 6.5868 1.89867 5.57759C2.02067 4.67021 2.24547 3.95505 2.66849 3.37558L3.02716 3.73426C2.69811 4.21337 2.50492 4.82079 2.39422 5.64421C2.26348 6.61659 2.25126 7.85863 2.25012 9.49999Z" class="group-hover:fill-black group-hover:stroke-white" />
@@ -172,8 +172,8 @@
                         </a>
                     </li>
                     <!-- Semester Report -->
-                    <li class="w-24 h-24 flex justify-center items-center border rounded-2xl border-gray-900 dark:border-white">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center items-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white pt-1" viewBox="0 0 24 24" fill="none">
                                 <g id="Linear / Files / File Text">
                                     <path id="Vector" d="M9.5 21.7499C7.85866 21.7487 6.61664 21.7365 5.64426 21.6057C5.64424 21.6057 5.64423 21.6057 5.64421 21.6057L5.71085 21.1102L9.5 21.7499ZM9.5 21.7499V22.2499V21.7499ZM18.4224 22.1013C17.4132 22.237 16.1357 22.2489 14.5 22.2499V21.7499C16.1413 21.7487 17.3834 21.7365 18.3558 21.6057M18.4224 22.1013L18.489 22.5969M18.4224 22.1013C18.4224 22.1013 18.4224 22.1014 18.4223 22.1014L18.489 22.5969M18.4224 22.1013C19.3297 21.9793 20.0449 21.7545 20.6244 21.3315L20.2657 20.9728C19.7866 21.3019 19.1792 21.4951 18.3558 21.6057M18.489 22.5969C17.4431 22.7375 16.1303 22.749 14.5 22.7499L20.9817 21.6888C20.2991 22.2095 19.4727 22.4646 18.489 22.5969ZM18.3558 21.6057L18.2892 21.1102M18.3558 21.6057C18.3558 21.6057 18.3558 21.6057 18.3558 21.6057L18.2892 21.1102M18.2892 21.1102C19.0166 21.0124 19.5211 20.8527 19.9047 20.6118M18.2892 21.1102L19.9047 20.6118M19.9047 20.6118L19.9445 20.6516L19.9047 20.6118ZM21.6057 18.3558C21.4951 19.1792 21.3019 19.7866 20.9728 20.2657L20.6517 19.9445L20.6118 19.9047L21.7499 14.5C21.7487 16.1413 21.7365 17.3834 21.6057 18.3558ZM21.6057 18.3558C21.6057 18.3558 21.6057 18.3558 21.6057 18.3558L21.1102 18.2892L21.6057 18.3558ZM22.1014 18.4224C22.237 17.4132 22.2489 16.1357 22.2499 14.5L22.1014 18.4223C22.1014 18.4223 22.1014 18.4224 22.1014 18.4224ZM22.1014 18.4224C21.9793 19.3297 21.7545 20.0449 21.3315 20.6244L22.1014 18.4224ZM22.0508 10.5247C22.2285 11.1688 22.2477 11.9311 22.2498 13.0629H21.7496C21.7468 11.9638 21.7272 11.2807 21.5887 10.7305L22.0508 10.5247ZM19.5558 8.13717L19.8904 7.76537C20.7303 8.52399 21.2841 9.04821 21.644 9.61118L21.1818 9.81703C20.8655 9.34606 20.3709 8.87444 19.5558 8.13717ZM13.3707 2.71896L13.552 2.24668C14.0339 2.51885 14.5127 2.92831 15.1884 3.53356L14.8537 3.90537C14.2044 3.32445 13.7748 2.95864 13.3707 2.71896ZM15.5973 4.57395L15.9319 4.20229L19.1473 7.09623L18.8128 7.46787L15.5973 4.57395ZM12.6183 1.88853L12.4371 2.36083C11.9748 2.26855 11.4072 2.25307 10.5298 2.2505V1.75029C11.4429 1.75237 12.0764 1.76827 12.6183 1.88853ZM9.5298 2.25011C7.87851 2.25124 6.62903 2.2634 5.65152 2.39423C4.82398 2.50499 4.21427 2.69827 3.73442 3.02731L3.37571 2.66859C3.95613 2.24538 4.67388 2.02061 5.5852 1.89864C6.59939 1.76291 7.88417 1.75111 9.5298 1.75009V2.25011ZM1.75 13.5V10.5H2.25V13.5H1.75ZM1.7501 14.5H2.25012C2.25126 16.1413 2.26348 17.3834 2.39422 18.3558L2.88976 18.2892L2.39422 18.3558C2.50492 19.1792 2.69811 19.7866 3.02717 20.2657L2.66849 20.6244C2.24548 20.0449 2.02067 19.3297 1.89867 18.4224C1.76299 17.4132 1.75113 16.1357 1.7501 14.5ZM3.3756 21.3315L3.73428 20.9728L9.5 22.7499C7.86967 22.749 6.55695 22.7375 5.51098 22.5969L5.57763 22.1014C5.57762 22.1014 5.57761 22.1013 5.57759 22.1013C4.67021 21.9793 3.95506 21.7545 3.3756 21.3315ZM13.5 22.25H10.5V21.75H13.5V22.25ZM2.25012 9.49999H1.7501C1.75113 7.86425 1.76299 6.5868 1.89867 5.57759C2.02067 4.67021 2.24547 3.95505 2.66849 3.37558L3.02716 3.73426C2.69811 4.21337 2.50492 4.82079 2.39422 5.64421C2.26348 6.61659 2.25126 7.85863 2.25012 9.49999Z" class="group-hover:fill-black group-hover:stroke-white" />
@@ -186,8 +186,8 @@
                         </a>
                     </li>
                     <!-- P5 Report -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white" viewBox="0 0 24 24" fill="none">
                                 <g id="Linear / Files / File Text">
                                     <path id="Vector" d="M9.5 21.7499C7.85866 21.7487 6.61664 21.7365 5.64426 21.6057C5.64424 21.6057 5.64423 21.6057 5.64421 21.6057L5.71085 21.1102L9.5 21.7499ZM9.5 21.7499V22.2499V21.7499ZM18.4224 22.1013C17.4132 22.237 16.1357 22.2489 14.5 22.2499V21.7499C16.1413 21.7487 17.3834 21.7365 18.3558 21.6057M18.4224 22.1013L18.489 22.5969M18.4224 22.1013C18.4224 22.1013 18.4224 22.1014 18.4223 22.1014L18.489 22.5969M18.4224 22.1013C19.3297 21.9793 20.0449 21.7545 20.6244 21.3315L20.2657 20.9728C19.7866 21.3019 19.1792 21.4951 18.3558 21.6057M18.489 22.5969C17.4431 22.7375 16.1303 22.749 14.5 22.7499L20.9817 21.6888C20.2991 22.2095 19.4727 22.4646 18.489 22.5969ZM18.3558 21.6057L18.2892 21.1102M18.3558 21.6057C18.3558 21.6057 18.3558 21.6057 18.3558 21.6057L18.2892 21.1102M18.2892 21.1102C19.0166 21.0124 19.5211 20.8527 19.9047 20.6118M18.2892 21.1102L19.9047 20.6118M19.9047 20.6118L19.9445 20.6516L19.9047 20.6118ZM21.6057 18.3558C21.4951 19.1792 21.3019 19.7866 20.9728 20.2657L20.6517 19.9445L20.6118 19.9047L21.7499 14.5C21.7487 16.1413 21.7365 17.3834 21.6057 18.3558ZM21.6057 18.3558C21.6057 18.3558 21.6057 18.3558 21.6057 18.3558L21.1102 18.2892L21.6057 18.3558ZM22.1014 18.4224C22.237 17.4132 22.2489 16.1357 22.2499 14.5L22.1014 18.4223C22.1014 18.4223 22.1014 18.4224 22.1014 18.4224ZM22.1014 18.4224C21.9793 19.3297 21.7545 20.0449 21.3315 20.6244L22.1014 18.4224ZM22.0508 10.5247C22.2285 11.1688 22.2477 11.9311 22.2498 13.0629H21.7496C21.7468 11.9638 21.7272 11.2807 21.5887 10.7305L22.0508 10.5247ZM19.5558 8.13717L19.8904 7.76537C20.7303 8.52399 21.2841 9.04821 21.644 9.61118L21.1818 9.81703C20.8655 9.34606 20.3709 8.87444 19.5558 8.13717ZM13.3707 2.71896L13.552 2.24668C14.0339 2.51885 14.5127 2.92831 15.1884 3.53356L14.8537 3.90537C14.2044 3.32445 13.7748 2.95864 13.3707 2.71896ZM15.5973 4.57395L15.9319 4.20229L19.1473 7.09623L18.8128 7.46787L15.5973 4.57395ZM12.6183 1.88853L12.4371 2.36083C11.9748 2.26855 11.4072 2.25307 10.5298 2.2505V1.75029C11.4429 1.75237 12.0764 1.76827 12.6183 1.88853ZM9.5298 2.25011C7.87851 2.25124 6.62903 2.2634 5.65152 2.39423C4.82398 2.50499 4.21427 2.69827 3.73442 3.02731L3.37571 2.66859C3.95613 2.24538 4.67388 2.02061 5.5852 1.89864C6.59939 1.76291 7.88417 1.75111 9.5298 1.75009V2.25011ZM1.75 13.5V10.5H2.25V13.5H1.75ZM1.7501 14.5H2.25012C2.25126 16.1413 2.26348 17.3834 2.39422 18.3558L2.88976 18.2892L2.39422 18.3558C2.50492 19.1792 2.69811 19.7866 3.02717 20.2657L2.66849 20.6244C2.24548 20.0449 2.02067 19.3297 1.89867 18.4224C1.76299 17.4132 1.75113 16.1357 1.7501 14.5ZM3.3756 21.3315L3.73428 20.9728L9.5 22.7499C7.86967 22.749 6.55695 22.7375 5.51098 22.5969L5.57763 22.1014C5.57762 22.1014 5.57761 22.1013 5.57759 22.1013C4.67021 21.9793 3.95506 21.7545 3.3756 21.3315ZM13.5 22.25H10.5V21.75H13.5V22.25ZM2.25012 9.49999H1.7501C1.75113 7.86425 1.76299 6.5868 1.89867 5.57759C2.02067 4.67021 2.24547 3.95505 2.66849 3.37558L3.02716 3.73426C2.69811 4.21337 2.50492 4.82079 2.39422 5.64421C2.26348 6.61659 2.25126 7.85863 2.25012 9.49999Z" class="group-hover:fill-black group-hover:stroke-white" />
@@ -201,12 +201,12 @@
                     </li>
                 </ul>
 
-                <div class="mt-6">Payment</div>
+                <div class="mt-6 md:border-t md:border-gray-900 dark:border-white md:pt-6">Payment</div>
 
-                <ul class="mt-4 text-gray-900 dark:text-white grid grid-cols-3 gap-4">
+                <ul class="mt-4 text-gray-900 dark:text-white grid grid-cols-3 gap-4 md:grid-cols-1">
                     <!-- Bill -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Linear / Money / Bill">
                                     <path id="Vector" d="M17.625 21.0002C18.2666 20.4299 19.2334 20.4299 19.875 21.0002C20.3109 21.3876 21 21.0782 21 20.495V3.50519C21 2.92196 20.3109 2.61251 19.875 2.99999C19.2334 3.57029 18.2666 3.57029 17.625 2.99999C16.9834 2.42969 16.0166 2.42969 15.375 2.99999C14.7334 3.57029 13.7666 3.57029 13.125 2.99999C12.4834 2.42969 11.5166 2.42969 10.875 2.99999C10.2334 3.57029 9.26659 3.57029 8.625 2.99999C7.98341 2.42969 7.01659 2.42969 6.375 2.99999C5.73341 3.57029 4.76659 3.57029 4.125 2.99999C3.68909 2.61251 3 2.92196 3 3.50519V20.495C3 21.0782 3.68909 21.3876 4.125 21.0002C4.76659 20.4299 5.73341 20.4299 6.375 21.0002C7.01659 21.5705 7.98341 21.5705 8.625 21.0002C9.26659 20.4299 10.2334 20.4299 10.875 21.0002C11.5166 21.5705 12.4834 21.5705 13.125 21.0002C13.7666 20.4299 14.7334 20.4299 15.375 21.0002C16.0166 21.5705 16.9834 21.5705 17.625 21.0002Z" stroke-width="1.5" class="group-hover:stroke-white"/>
@@ -219,8 +219,8 @@
                         </a>
                     </li>
                     <!-- Transaction -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Linear / Money / Wallet">
                                     <path id="Vector" d="M6 8H10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"/>
@@ -233,8 +233,8 @@
                         </a>
                     </li>
                     <!-- Payment History -->
-                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2">
-                        <a href="#" class="flex flex-col justify-center items-center gap-2">
+                    <li class="w-24 h-24 flex justify-center border rounded-2xl border-gray-900 dark:border-white p-2 md:w-full md:h-auto md:border-0 md:justify-start">
+                        <a href="#" class="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-4">
                             <svg class="icon w-8 h-8 stroke-current text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Linear / Money / Bill">
                                     <path id="Vector" d="M17.625 21.0002C18.2666 20.4299 19.2334 20.4299 19.875 21.0002C20.3109 21.3876 21 21.0782 21 20.495V3.50519C21 2.92196 20.3109 2.61251 19.875 2.99999C19.2334 3.57029 18.2666 3.57029 17.625 2.99999C16.9834 2.42969 16.0166 2.42969 15.375 2.99999C14.7334 3.57029 13.7666 3.57029 13.125 2.99999C12.4834 2.42969 11.5166 2.42969 10.875 2.99999C10.2334 3.57029 9.26659 3.57029 8.625 2.99999C7.98341 2.42969 7.01659 2.42969 6.375 2.99999C5.73341 3.57029 4.76659 3.57029 4.125 2.99999C3.68909 2.61251 3 2.92196 3 3.50519V20.495C3 21.0782 3.68909 21.3876 4.125 21.0002C4.76659 20.4299 5.73341 20.4299 6.375 21.0002C7.01659 21.5705 7.98341 21.5705 8.625 21.0002C9.26659 20.4299 10.2334 20.4299 10.875 21.0002C11.5166 21.5705 12.4834 21.5705 13.125 21.0002C13.7666 20.4299 14.7334 20.4299 15.375 21.0002C16.0166 21.5705 16.9834 21.5705 17.625 21.0002Z" stroke-width="1.5" class="group-hover:stroke-white"/>
@@ -257,7 +257,7 @@
                 <div class="w-full flex justify-between items-center my-4">
                     <div class="flex flex-col justify-center items-center">
                         <img class="logo w-32 h-12" src="../../public/logo-gis.png" alt="Logo GIS">
-                        <p class="text text-center text-gray-900 dark:text-white text-sm font-medium leading-8">Junior High School</p>
+                        <p class="text text-center text-gray-900 dark:text-white text-sm font-medium leading-8">Senior High School</p>
                     </div>
                     <button id="toggleSidebar" class="relative px-2">
                         <svg id="sidebarArrow" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 arrow-collapse" viewBox="0 0 32 32"
@@ -387,7 +387,7 @@
                             <span class="text text-gray-900 dark:text-white text-base font-normal leading-6 group-hover:text-white">Bill</span>
                         </a>
                     </li>
-                    <!-- Transaksi -->
+                    <!-- Transaction -->
                     <li>
                         <a href="#" class="group w-full p-2 rounded-lg flex items-center gap-2 dark:hover:bg-ungu hover:bg-[#16a0f9]">
                             <svg class="icon w-6 h-6 stroke-current text-gray-900 group-hover:text-white dark:text-white dark:group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -398,7 +398,7 @@
                                     <path id="Vector_4" d="M17.9912 12H18.0002" stroke-opacity="0.996078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"/>
                                 </g>
                             </svg>                        
-                        <span class="text text-gray-900 dark:text-white text-base font-normal leading-6 group-hover:text-white">Transaction</span>
+                            <span class="text text-gray-900 dark:text-white text-base font-normal leading-6 group-hover:text-white">Transaction</span>
                         </a>
                     </li>
                     <!-- Payment History -->
@@ -436,10 +436,10 @@
                         </div>
                         <!-- ilustration -->
                         <div class="lg:w-1/3 lg:h-full flex-col justify-center items-center gap-2 inline-flex relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 -right-5" width="110" height="90" viewBox="0 0 123 108" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 -right-5 w-24 h-24" viewBox="0 0 123 108" fill="none">
                                 <ellipse cx="65.5" cy="66" rx="65.5" ry="66" fill="white" fill-opacity="0.1"/>
                             </svg>    
-                            <img class="w-24 h-24" src="../public/dark-banner-ilustration.svg">
+                            <img class="w-40 h-24 pl-2" src="../public/dark-banner-ilustration.svg">
                         </div>
                     </section>
 

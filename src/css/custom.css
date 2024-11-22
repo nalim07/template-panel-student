@@ -495,6 +495,21 @@
     opacity: 1;
 }
 
+/* Border Radius */
+.border-radius {
+    border-radius: 64px 64px 0px 0px;
+}
+
+@media (min-width: 768px) {
+    .border-radius {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+}
+
 /* Menu Hidden State */
 #menu {
     transform: translateY(100%);
@@ -508,4 +523,14 @@
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-}  
+}
+
+@media (min-width: 768px) {
+    #menu {
+        transform: translateX(-100%);
+    }
+
+    #menu.show {
+        transform: translateX(0);
+    }
+}
