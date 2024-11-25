@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animasi kelap-kelip */
+        @keyframes twinkle {
+            0% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.2;
+            }
+        }
+
+        .twinkle {
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-[#131420] text-white flex justify-center items-center h-screen w-screen">
+    <div class="relative w-full h-full max-w-[1280px] max-h-[720px]">
+        <!-- Background Stars -->
+        <div class="absolute inset-0">
+            <!-- SVG Stars with animation -->
+            <svg class="absolute top-5 right-20 twinkle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+            <svg class="absolute top-20 left-60 twinkle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+            <svg class="absolute top-40 left-80 twinkle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+            <svg class="absolute top-60 left-40 twinkle" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+            <!-- Tambahan Bintang -->
+            <svg class="absolute bottom-5 left-10 twinkle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+            <svg class="absolute top-80 right-32 twinkle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M8.92923 6.76136L15.6149 7.86312L8.92923 8.96487L7.82748 15.6506L6.72571 8.96487L0.0400391 7.86312L6.72571 6.76136L7.82748 0.0756836L8.92923 6.76136Z"
+                    fill="white" />
+            </svg>
+        </div>
+
+        <!-- 404 Error -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+            <div class="relative">
+                <!-- Astronaut -->
+                <img src="../public/astronot.gif" alt="astronaut" class="w-32 sm:w-48 md:w-56 lg:w-96 mx-auto">
+                <p class="mt-4 text-white text-2xl leading-tight" style="font-family: 'Laila Regular';">
+                    Maaf... <br>kayaknya halaman ini kabur deh. Coba cek kolong meja
+                    <br>hehe...
+                </p>
+            </div>
+            <div class="flex justify-center mt-4">
+                <p class="text-white text-2xl font-[Laila] leading-tight">Sekarang balik dulu yak...</p>
+                <button class="bg-[#6E62E5] text-white mx-4 px-8 rounded-lg hover:bg-[#6E62E5]/80 transition">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
