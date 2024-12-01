@@ -15,6 +15,7 @@
   "description": "",
   "dependencies": {
     "apexcharts": "^4.0.0",
-    "flowbite": "^2.5.2"
+    "flowbite": "^2.5.2",
+    "simple-datatables": "^9.2.1"
   }
 }
